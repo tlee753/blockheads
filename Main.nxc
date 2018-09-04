@@ -11,8 +11,8 @@ void initializeSensors() {
 
 void moveForward() { // Jill
     // move the robot forward using differential steering
-    OnFwd(OUT_B, 75);
-    OnFwd(OUT_C, 75);
+    OnFwd(OUT_B, 25);
+    OnFwd(OUT_C, 25);
 }
 
 void backUp() { // Jill
@@ -43,11 +43,13 @@ bool lineDetect() { // Lara
     // detect whether or not there is a line
     NumOut(0,30,SensorValue(S3));
     return SensorValue(S3) < BLACK_LINE_LIGHT_THRESHOLD;
+
 }
 
 bool cupDetect() { // Sam
     // detect whether or not there is a cup in range
     // this is gonna be a tough mother, probably need static variables
+    return false;
 }
 
 bool orient() { // Sam
@@ -55,11 +57,16 @@ bool orient() { // Sam
     // return true if properly oriented, false otherwise (probably change back to search mode)
 }
 
-void turnAround() { // Tyler
-    // turn robot around to a random angle between approx. 150 and 210
+bool moveIntoGrabbingPosition() { // Jill
+    // move the robot forward until cup can be grabbed
 }
 
-void openclaws() {
+void turnAround() { // Tyler
+    // turn robot around to a random angle between approx. 150 and 210
+    TextOut(20,0,"DONE!");
+}
+
+void openClaws() {
     RotateMotor(OUT_A, 75, 60); // 60 degrees open direction
 }
 
@@ -74,6 +81,13 @@ int getUltrasonicReading() {
 
 task main() {
 
+     // text header for robot screen
+    TextOut(0, 60, "Block Heads");
+    TextOut(0, 50, "Main");
+    TextOut(0, 40, "Version 1.0");
+    
+    initializeSensors();
+
     const int searchState = 1;
     const int grabState = 2;
     const int removeState = 3;
@@ -83,23 +97,26 @@ task main() {
 
     while (stateMachineRunning) { // while loop that keeps the entire state machine running
 
-        TextOut(10, 0, "State is currently ");
-        NumOut(0, 0, state); // show state variable on robot screen
-
+        TextOut(0, 10, "State is currently ");
+        
         switch (state) {
             case searchState:
-                while (!lineDetect() and !cupDetect()) {
+                TextOut(0, 0, "Search");
+                bool temp1 = lineDetect();
+                bool temp2 = cupDetect();
+                if (!temp1 && !temp2) {
                     moveForward();
-                }
-                if (lineDetect()) {
+                } else if (temp1) {
                     turnAround();
-                }
-                if (cupDetect()) {
+                } else if (temp2) {
                     state = grabState;
+                } else {
+                  state = -1;
                 }
                 break;
 
             case grabState:
+                TextOut(0, 0, "Grab");
                 if (!orient()) {
                     state = searchState;
                     closeClaws();
@@ -117,6 +134,7 @@ task main() {
                 break;
             
             case removeState:
+                TextOut(0, 0, "Remove");
                 while (!lineDetect()) {
                     moveForward();
                 }
