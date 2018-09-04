@@ -1,34 +1,36 @@
 void initializeSensors() {
-    SetMicrophone(S1);
     SetSensorUltrasonic(S2);
-    SetSensorLineDetect(S3);
-    SetSensorPushButton(S4);
+    SetSensorLight(S3);
 }
 
-void moveForward() {
+void moveForward() { // Jill
     // move the robot forward using differential steering
+    OnFwd(OUT_B, 75);
+    OnFwd(OUT_C, 75);
 }
 
-void backUp() {
+void backUp() { // Jill
     // back the robot up to get away from the cup
+    OnRev(OUT_B, 75);
+    OnRev(OUT_C, 75);
 }
 
-bool lineDetect() {
+bool lineDetect() { // Lara
     // detect whether or not there is a line
-    return SensorLD(S3);
+    return SensorValue(S3) > 40;
 }
 
-bool cupDetect() {
+bool cupDetect() { // Sam
     // detect whether or not there is a cup in range
     // this is gonna be a tough mother, probably need static variables
 }
 
-bool orient() {
+bool orient() { // Sam
     // orient toward the cup
     // return true if properly oriented, false otherwise (probably change back to search mode)
 }
 
-void turnAround() {
+void turnAround() { // Tyler
     // turn robot around to a random angle between approx. 150 and 210
 }
 
@@ -69,7 +71,7 @@ task main() {
         switch (state) {
             case searchState:
                 while (!lineDetect() and !cupDetect()) {
-                    moveForward()
+                    moveForward();
                 }
                 if (lineDetect()) {
                     turnAround();
@@ -86,7 +88,7 @@ task main() {
                     break;
                 }
                 openClaws();
-                if (!moveIntoGrabbingPosition) {
+                if (!moveIntoGrabbingPosition()) {
                     state = searchState;
                     closeClaws();
                     break;
@@ -97,8 +99,9 @@ task main() {
                 break;
             
             case removeState:
-                moveForward();
-                lineDetect();
+                while (!lineDetect()) {
+                    moveForward();
+                }
                 openClaws();
                 backUp();
                 closeClaws();
@@ -106,7 +109,7 @@ task main() {
                 state = searchState;
                 break;
 
-            default: // error stae
+            default: // error state
                 stateMachineRunning = false; // gets you out of state machine
         }
     }
