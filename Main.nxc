@@ -71,11 +71,11 @@ task main() {
 
     while (stateMachineRunning) { // while loop that keeps the entire state machine running
 
-        TextOut(10, 0, "State is currently ");
-        NumOut(0, 0, state); // show state variable on robot screen
-
+        TextOut(0, 10, "State is currently ");
+        
         switch (state) {
             case searchState:
+                TextOut(0, 0, "Search");
                 while (!(lineDetect()) && !(cupDetect())) {
                     moveForward();
                 }
@@ -88,6 +88,7 @@ task main() {
                 break;
 
             case grabState:
+                TextOut(0, 0, "Grab");
                 if (!orient()) {
                     state = searchState;
                     closeClaws();
@@ -105,6 +106,7 @@ task main() {
                 break;
             
             case removeState:
+                TextOut(0, 0, "Remove");
                 while (!lineDetect()) {
                     moveForward();
                 }
