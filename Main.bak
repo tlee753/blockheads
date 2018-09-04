@@ -1,60 +1,152 @@
 
-#define DARK_LINE_LIGHT_THRESHOLD 40
+//MARK :- CONSTANTS
+#define BLACK_LINE_LIGHT_THRESHOLD 500
+
+//MARK -: FUNCTIONS
+void initializeSensors() {
+    SetSensorUltrasonic(S2);
+    SetSensorLight(S3);
+    SetSensorMode(IN_3,SENSOR_MODE_RAW);
+}
+
+void moveForward() { // Jill
+    // move the robot forward using differential steering
+    OnFwd(OUT_B, 75);
+    OnFwd(OUT_C, 75);
+}
+
+void backUp() { // Jill
+    // back the robot up to get away from the cup
+    OnRev(OUT_B, 75);
+    OnRev(OUT_C, 75);
+}
+
+void stopMoving() {
+    // move the robot forward using differential steering
+    OnFwd(OUT_B, 0);
+    OnFwd(OUT_C, 0);
+}
+
+int getAmbientLightData(){
+    SetSensorType(IN_3,IN_TYPE_LIGHT_INACTIVE);
+    SetSensorMode(IN_3,IN_MODE_PCTFULLSCALE);
+    ResetSensor(IN_3);
+    return SensorValue(S3);
+}
+
+int getLightSensorData(){
+
+    return SensorValue(S3);
+}
+
+bool lineDetect() { // Lara
+    // detect whether or not there is a line
+    NumOut(0,30,SensorValue(S3));
+    return SensorValue(S3) < BLACK_LINE_LIGHT_THRESHOLD;
+}
+
+bool cupDetect() { // Sam
+    // detect whether or not there is a cup in range
+    // this is gonna be a tough mother, probably need static variables
+}
+
+bool orient() { // Sam
+    // orient toward the cup
+    // return true if properly oriented, false otherwise (probably change back to search mode)
+}
+
+void turnAround() { // Tyler
+    // turn robot around to a random angle between approx. 150 and 210
+}
+
+void openclaws() {
+    RotateMotor(OUT_A, 75, 60); // 60 degrees open direction
+}
+
+void closeClaws() {
+    RotateMotor(OUT_A, 75, -60); // 60 degrees close direction
+}
+
+int getUltrasonicReading() {
+    return SensorUS(S2); // digital readout of sensor value
+}
+
 
 task main() {
-     TextOut(0, 60, "Block Heads");
-     TextOut(0, 50, "Main");
-     TextOut(0, 40, "Version 1.0");
-     
-     
-     State variable = search;
-     
-     
-     case search:
-          move forward
-          interrupt: checking for line detection
-                     turn around
-          interrupt: checking for cup detection (delta distance)
-     
-     case grab:
-          orient toward the cup (tough)
-          open claws
-          move into position
-          grab
-          possible sense that cup is there (optional)
+    // text header for robot screen
+    TextOut(0, 60, "Block Heads");
+    TextOut(0, 50, "Line Detect Test");
+    TextOut(0, 40, "Version 1.0");
+    initializeSensors();
+    Wait(1000);
+    NumOut(0,20,getLightSensorData());
 
+    while (!lineDetect()) {
+          moveForward();
+    };
+    TextOut(0,10,"DONE!");
+    while(true){
+    stopMoving();
+    }
      
-     case removeCup:
-          move forward
-          line detect
-          drop cup
-          turn around
+     /*
+    const int searchState = 1;
+    const int grabState = 2;
+    const int removeState = 3;
 
-     
-     TextOut(0, 10, "Distance Reading");
-     SetSensorUltrasonic(S2);
-     //while (true) {
-     //      TextOut(20, 0, " ");
-     //      NumOut(0, 0, SensorUS(S2));
-     //}
-     
-     // Makes the claws open and close
+    int state = searchState;
+    bool stateMachineRunning = true;
 
+    while (stateMachineRunning) { // while loop that keeps the entire state machine running
 
-     //RotateMotor(OUT_B, 75, 720);
-     //RotateMotor(OUT_C, 75, 720);
-}
+        TextOut(10, 0, "State is currently ");
+        NumOut(0, 0, state); // show state variable on robot screen
 
-Function openclaws() {
-     RotateMotor(OUT_A, 75, 60);
-}
+        switch (state) {
+            case searchState:
+                while (!lineDetect() and !cupDetect()) {
+                    moveForward();
+                }
+                if (lineDetect()) {
+                    turnAround();
+                }
+                if (cupDetect()) {
+                    state = grabState;
+                }
+                break;
 
-Function closeClaws() {
-     RotateMotor(OUT_A, 75, - 60);
-}
+            case grabState:
+                if (!orient()) {
+                    state = searchState;
+                    closeClaws();
+                    break;
+                }
+                openClaws();
+                if (!moveIntoGrabbingPosition()) {
+                    state = searchState;
+                    closeClaws();
+                    break;
+                }
+                closeClaws();
+                state = removeState;
+                // possible sense that cup is there (optional)
+                break;
+            
+            case removeState:
+                while (!lineDetect()) {
+                    moveForward();
+                }
+                openClaws();
+                backUp();
+                closeClaws();
+                turnAround();
+                state = searchState;
+                break;
 
-Function moveStraightUntilBlackLine() {
-
+            default: // error state
+                stateMachineRunning = false; // gets you out of state machine
+        }
+    }     */
 }
 
 
