@@ -21,7 +21,7 @@ task main() {
           possible sense that cup is there (optional)
 
      
-     case remove:
+     case removeCup:
           move forward
           line detect
           drop cup
