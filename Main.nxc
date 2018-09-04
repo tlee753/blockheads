@@ -16,8 +16,7 @@ void backUp() { // Jill
 }
 
 bool lineDetect() { // Lara
-    // detect whether or not there is a line
-    return SensorValue(S3) > 40;
+    return SensorValue(S3) > 40; // detect whether or not there is a line
 }
 
 bool cupDetect() { // Sam
@@ -31,8 +30,8 @@ bool orient() { // Sam
 }
 
 void turnAround() { // Tyler
-    // turn robot around to a random angle between approx. 150 and 210
-}
+    OnFwd(OUT_B, 60);
+    OnRev(OUT_C, 60);}
 
 void openclaws() {
     RotateMotor(OUT_A, 75, 60); // 60 degrees open direction
