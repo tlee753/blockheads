@@ -1,3 +1,41 @@
+void initializeSensors() {
+    SetMicrophone(S1);
+    SetSensorUltrasonic(S2);
+    SetSensorLineDetect(S3);
+    SetSensorPushButton(S4);
+}
+
+void moveForward() {
+    // move the robot forward using differential steering
+}
+
+void backUp() {
+    // back the robot up to get away from the cup
+}
+
+bool lineDetect() {
+    // detect whether or not there is a line
+    return SensorLD(S3);
+}
+
+void turnAround() {
+    // turn robot around to a random angle between approx. 150 and 210
+}
+
+void openclaws() {
+    RotateMotor(OUT_A, 75, 60); // 60 degrees open direction
+}
+
+void closeClaws() {
+    RotateMotor(OUT_A, 75, -60); // 60 degrees close direction
+}
+
+int getUltrasonicReading() {
+    return SensorUS(S2); // digital readout of sensor value
+}
+
+
+
 task main() {
     // text header for robot screen
     TextOut(0, 60, "Block Heads");
@@ -20,25 +58,25 @@ task main() {
 
         switch (state) {
             case searchState:
-                while (True) {
+                while (!lineDetect() and !cupDetect()) {
                     moveForward()
-                    interrupt: checking for line detection
-                        turn around
-                    interrupt: checking for cup detection (delta distance)
-                        if cupDetected
-                            state = grabState
-                            break; // get out of search state, enter grab state
                 }
+                if (lineDetect()) {
+                    turnAround();
+                }
+                if (cupDetect()) {
+                    state = grabState;
+                }
+                break;
 
             case grabState:
                 orient toward the cup (tough) // this is gonna be a tough one to solve
                 openClaws();
                 move into position // also a tough one to solve
                 closeClaws();
-                // possible sense that cup is there (optional)
                 state = removeState;
+                // possible sense that cup is there (optional)
                 break;
-
             
             case removeState:
                 moveForward();
@@ -50,45 +88,10 @@ task main() {
                 state = searchState;
                 break;
 
-            default:
+            default: // error stae
                 stateMachineRunning = false; // gets you out of state machine
         }
     }
-}
-
-Function initializeSensors() {
-    SetMicrophone(S1);
-    SetSensorUltrasonic(S2);
-    SetSensorLineDetect(S3);
-    SetSensorPushButton(S4);
-}
-
-Function moveForward() {
-    // move the robot forward using differential steering
-}
-
-Function backUp() {
-
-}
-
-Function lineDetect() {
-    // detect whether or not there is a line
-}
-
-Function turnAround() {
-    // turn robot around to a random angle between approx. 150 and 210
-}
-
-Function openclaws() {
-    RotateMotor(OUT_A, 75, 60); // 60 degrees open direction
-}
-
-Function closeClaws() {
-    RotateMotor(OUT_A, 75, -60); // 60 degrees close direction
-}
-
-Function getUltrasonicReading() {
-    return SensorUS(S2); // digital readout of sensor value
 }
 
 
