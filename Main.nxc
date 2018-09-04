@@ -3,51 +3,61 @@ task main() {
      TextOut(0, 50, "Main");
      TextOut(0, 40, "Version 1.0");
      
+     initializeSensors()
      
-     State variable = search;
-     
-     
-     case search:
-          move forward
-          interrupt: checking for line detection
-                     turn around
-          interrupt: checking for cup detection (delta distance)
-     
-     case grab:
-          orient toward the cup (tough)
-          open claws
-          move into position
-          grab
-          possible sense that cup is there (optional)
+     const int searchState = 1;
+     const int grabState = 2;
+     const int removeState = 3;
 
+     int state = searchState;
      
-     case removeCup:
-          move forward
-          line detect
-          drop cup
-          turn around
+    while (True) { // while loop that keeps the entire state machine running
+        switch (state) {
+            case searchState:
+                while (True) {
+                    move forward
+                    interrupt: checking for line detection
+                        turn around
+                    interrupt: checking for cup detection (delta distance)
+                        if cupDetected
+                            state = grabState
+                            break // get out of search state, enter grab state
+                }
 
-     
-     TextOut(0, 10, "Distance Reading");
-     SetSensorUltrasonic(S2);
-     //while (true) {
-     //      TextOut(20, 0, " ");
-     //      NumOut(0, 0, SensorUS(S2));
-     //}
-     
-     // Makes the claws open and close
+            case grabState:
+                orient toward the cup (tough)
+                open claws
+                move into position
+                grab
+                possible sense that cup is there (optional)
 
+            
+            case removeState:
+                move forward
+                line detect
+                drop cup
+                turn around
+        }
+    }
+}
 
-     //RotateMotor(OUT_B, 75, 720);
-     //RotateMotor(OUT_C, 75, 720);
+Function initializeSensors() {
+    SetMicrophone(S1);
+    SetSensorUltrasonic(S2);
+    SetSensorLineDetect(S3);
+    SetSensorPushButton(S4);
 }
 
 Function openclaws() {
-     RotateMotor(OUT_A, 75, 60);
+    RotateMotor(OUT_A, 75, 60);
 }
 
 Function closeClaws() {
-     RotateMotor(OUT_A, 75, - 60);
+    RotateMotor(OUT_A, 75, - 60);
+}
+
+Function getUltrasonicReading() {
+    return SensorUS(S2);
 }
 
 
