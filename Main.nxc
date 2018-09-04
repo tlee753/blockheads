@@ -1,9 +1,10 @@
 task main() {
+    // text header for robot screen
     TextOut(0, 60, "Block Heads");
     TextOut(0, 50, "Main");
     TextOut(0, 40, "Version 1.0");
      
-    initializeSensors()
+    initializeSensors();
      
     const int searchState = 1;
     const int grabState = 2;
@@ -13,6 +14,10 @@ task main() {
     bool stateMachineRunning = true;
 
     while (stateMachineRunning) { // while loop that keeps the entire state machine running
+
+        TextOut(10, 0, "State is currently ");
+        NumOut(0, 0, state); // show state variable on robot screen
+
         switch (state) {
             case searchState:
                 while (True) {
@@ -26,9 +31,9 @@ task main() {
                 }
 
             case grabState:
-                orient toward the cup (tough)
+                orient toward the cup (tough) // this is gonna be a tough one to solve
                 openClaws();
-                move into position
+                move into position // also a tough one to solve
                 closeClaws();
                 // possible sense that cup is there (optional)
                 state = removeState;
