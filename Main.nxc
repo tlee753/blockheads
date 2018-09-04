@@ -1,42 +1,52 @@
 task main() {
-     TextOut(0, 60, "Block Heads");
-     TextOut(0, 50, "Main");
-     TextOut(0, 40, "Version 1.0");
+    TextOut(0, 60, "Block Heads");
+    TextOut(0, 50, "Main");
+    TextOut(0, 40, "Version 1.0");
      
-     initializeSensors()
+    initializeSensors()
      
-     const int searchState = 1;
-     const int grabState = 2;
-     const int removeState = 3;
+    const int searchState = 1;
+    const int grabState = 2;
+    const int removeState = 3;
 
-     int state = searchState;
-     
-    while (True) { // while loop that keeps the entire state machine running
+    int state = searchState;
+    bool stateMachineRunning = true;
+
+    while (stateMachineRunning) { // while loop that keeps the entire state machine running
         switch (state) {
             case searchState:
                 while (True) {
-                    move forward
+                    moveForward()
                     interrupt: checking for line detection
                         turn around
                     interrupt: checking for cup detection (delta distance)
                         if cupDetected
                             state = grabState
-                            break // get out of search state, enter grab state
+                            break; // get out of search state, enter grab state
                 }
 
             case grabState:
                 orient toward the cup (tough)
-                open claws
+                openClaws();
                 move into position
-                grab
-                possible sense that cup is there (optional)
+                closeClaws();
+                // possible sense that cup is there (optional)
+                state = removeState;
+                break;
 
             
             case removeState:
-                move forward
-                line detect
-                drop cup
-                turn around
+                moveForward();
+                lineDetect();
+                openClaws();
+                backUp();
+                closeClaws();
+                turnAround();
+                state = searchState;
+                break;
+
+            default:
+                stateMachineRunning = false; // gets you out of state machine
         }
     }
 }
@@ -48,16 +58,32 @@ Function initializeSensors() {
     SetSensorPushButton(S4);
 }
 
+Function moveForward() {
+    // move the robot forward using differential steering
+}
+
+Function backUp() {
+
+}
+
+Function lineDetect() {
+    // detect whether or not there is a line
+}
+
+Function turnAround() {
+    // turn robot around to a random angle between approx. 150 and 210
+}
+
 Function openclaws() {
-    RotateMotor(OUT_A, 75, 60);
+    RotateMotor(OUT_A, 75, 60); // 60 degrees open direction
 }
 
 Function closeClaws() {
-    RotateMotor(OUT_A, 75, - 60);
+    RotateMotor(OUT_A, 75, -60); // 60 degrees close direction
 }
 
 Function getUltrasonicReading() {
-    return SensorUS(S2);
+    return SensorUS(S2); // digital readout of sensor value
 }
 
 
