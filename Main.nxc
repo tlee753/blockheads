@@ -18,6 +18,16 @@ bool lineDetect() {
     return SensorLD(S3);
 }
 
+bool cupDetect() {
+    // detect whether or not there is a cup in range
+    // this is gonna be a tough mother, probably need static variables
+}
+
+bool orient() {
+    // orient toward the cup
+    // return true if properly oriented, false otherwise (probably change back to search mode)
+}
+
 void turnAround() {
     // turn robot around to a random angle between approx. 150 and 210
 }
@@ -70,9 +80,17 @@ task main() {
                 break;
 
             case grabState:
-                orient toward the cup (tough) // this is gonna be a tough one to solve
+                if (!orient()) {
+                    state = searchState;
+                    closeClaws();
+                    break;
+                }
                 openClaws();
-                move into position // also a tough one to solve
+                if (!moveIntoGrabbingPosition) {
+                    state = searchState;
+                    closeClaws();
+                    break;
+                }
                 closeClaws();
                 state = removeState;
                 // possible sense that cup is there (optional)
