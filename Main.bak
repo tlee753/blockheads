@@ -1,3 +1,6 @@
+
+#define DARK_LINE_LIGHT_THRESHOLD 40
+
 task main() {
      TextOut(0, 60, "Block Heads");
      TextOut(0, 50, "Main");
@@ -21,7 +24,7 @@ task main() {
           possible sense that cup is there (optional)
 
      
-     case remove:
+     case removeCup:
           move forward
           line detect
           drop cup
@@ -48,6 +51,10 @@ Function openclaws() {
 
 Function closeClaws() {
      RotateMotor(OUT_A, 75, - 60);
+}
+
+Function moveStraightUntilBlackLine() {
+
 }
 
 
