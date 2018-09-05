@@ -65,8 +65,8 @@ bool moveIntoGrabbingPosition() { // Jill
 
 void turnAround() { // Tyler
     // turn robot around to a random angle between approx. 150 and 210
-    TextOut(20,0,"DONE!");
-    stopMoving();
+    OnFwd(OUT_B, 60);
+    OnRev(OUT_C, 60);
 }
 
 void openClaws() {
@@ -100,7 +100,7 @@ task main() {
 
     while (stateMachineRunning) { // while loop that keeps the entire state machine running
 
-        TextOut(0, 10, "State is currently ");
+        TextOut(0, 10, "State is ");
         
         switch (state) {
             case searchState:
@@ -170,6 +170,7 @@ task main() {
                 break;
 
             default: // error state
+                TextOut(0, 0, "Error");
                 stateMachineRunning = false; // gets you out of state machine
         }
     }
