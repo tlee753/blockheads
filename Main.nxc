@@ -11,16 +11,16 @@ void initializeSensors() {
     SetSensorMode(IN_3,SENSOR_MODE_RAW);
 }
 
-void moveForward() { // Jill
+void moveForward(char speed) { // Jill
     // move the robot forward using differential steering
-    OnFwd(OUT_B, 25);
-    OnFwd(OUT_C, 25);
+    OnFwd(OUT_B, speed);
+    OnFwd(OUT_C, speed);
 }
 
-void backUp() { // Jill
+void backUp(char speed) { // Jill
     // back the robot up to get away from the cup
-    OnRev(OUT_B, 75);
-    OnRev(OUT_C, 75);
+    OnRev(OUT_B, speed);
+    OnRev(OUT_C, speed);
 }
 
 void stopMoving() {
@@ -108,13 +108,16 @@ task main() {
                 bool temp1 = lineDetect();
                 bool temp2 = cupDetect();
                 if (!temp1 && !temp2) {
-                    moveForward();
+                    moveForward(25);
                 } else if (temp1) {
                     //turnAround();
                     //TextOut(20,0,"HIT LINE!");
                     stopMoving();
                 } else if (temp2) {
                     openClaws();
+                    moveForward(30);
+                    Wait(1500);
+                    closeClaws();
                     state = grabState;
                 } else {
                   state = -1;
@@ -131,12 +134,18 @@ task main() {
 
                 bool lineDetected = lineDetect();
                 if (lineDetected) {
-                   closeClaws();
+                   //closeClaws();
                    stopMoving();
                    Wait(1000);
-                   state = removeState;
+                   openClaws();
+                   backUp(25);
+                   Wait(1000);
+                   closeClaws();
+                   stateMachineRunning = false;
+                   //state = removeState;
+                     //stateMachineRunning = false;
                 } else {
-                  moveForward();
+                  moveForward(25);
                 }
                 /*if (!moveIntoGrabbingPosition()) {
                     state = searchState;
@@ -150,14 +159,14 @@ task main() {
             
             case removeState:
                 TextOut(0, 0, "Remove");
-                while (!lineDetect()) {
+                /*while (!lineDetect()) {
                     moveForward();
                 }
                 openClaws();
                 backUp();
                 closeClaws();
                 turnAround();
-                state = searchState;
+                state = searchState; */
                 break;
 
             default: // error state

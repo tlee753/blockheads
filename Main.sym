@@ -1,173 +1,169 @@
 #SYMBOLS
 Index	Identifier	Type	Flag	Data	Size	RefCount
-0	__DU0lineDetect	5	1	0	4	5
+0	__DU0lineDetect	5	1	0	4	3
 1	__D0lineDetect	6	1	4	4	7
 2	__DU0cupDetect	5	1	8	4	2
-3	__D0main	6	1	12	4	25
+3	__D0main	6	1	12	4	23
 4	__D0openClaws	6	1	16	4	2
 5	__D0moveForward	6	1	20	4	4
-6	__DU0main	5	1	24	4	18
+6	__DU0main	5	1	24	4	16
 7	__D0cupDetect	6	1	28	4	6
 8	__CLSRMutex1	9	0	32	4	2
 9	__CLSWMutex1	9	0	36	4	2
 10	__CLSCSMutex1	9	0	40	4	2
-11	__TextOutMutex	9	0	44	4	18
+11	__TextOutMutex	9	0	44	4	16
 12	__D0closeClaws	6	1	48	4	2
 13	__D0backUp	6	1	52	4	4
 14	__RLSBmutex1	9	0	56	4	2
-15	__D0stopMoving	6	1	60	4	4
-16	__signed_stack_001main	6	1	64	4	14
-17	__signed_stack_002lineDetect	6	1	68	4	2
-18	__signed_stack_001lineDetect	6	1	72	4	4
-19	__signed_stack_002main	6	1	76	4	14
-20	__signed_stack_002turnAround	6	1	80	4	2
-21	__signed_stack_001turnAround	6	1	84	4	2
-22	__signed_stack_001openClaws	6	1	88	4	2
-23	__signed_stack_001cupDetect	6	1	92	4	2
-24	__D0SetSensorLowspeed_inline_initializeSensors	6	1	96	4	2
-25	__DU0SetSensorLight_inline_initializeSensors	5	1	100	4	5
-26	__D0SetSensorLight_inline_initializeSensors	6	1	104	4	2
-27	__DU0SetSensorLowspeed_inline_initializeSensors	5	1	108	4	5
-28	__signed_stack_001closeClaws	6	1	112	4	2
-29	__DU0SetSensorLowspeed_inline_SetSensorUltrasonic	5	1	116	4	5
-30	__D0SetSensorLowspeed_inline_SetSensorUltrasonic	6	1	120	4	2
-31	__rotate_angle0	6	1	124	4	6
-32	__ResetSensorMutex	9	0	128	4	6
+15	__signed_stack_002lineDetect	6	1	60	4	2
+16	__signed_stack_001lineDetect	6	1	64	4	4
+17	__signed_stack_001cupDetect	6	1	68	4	2
+18	__signed_stack_001main	6	1	72	4	14
+19	__Wait_7qG2_ms_7qG2_000_inline_main	5	1	76	4	6
+20	__signed_stack_001openClaws	6	1	80	4	2
+21	__signed_stack_002main	6	1	84	4	14
+22	__signed_stack_001closeClaws	6	1	88	4	2
+23	__DU0SetSensorLight_inline_initializeSensors	5	1	92	4	5
+24	__D0SetSensorLight_inline_initializeSensors	6	1	96	4	2
+25	__D0stopMoving	6	1	100	4	4
+26	__D0SetSensorLowspeed_inline_initializeSensors	6	1	104	4	2
+27	__DU0SetSensorLowspeed_inline_SetSensorUltrasonic	5	1	108	4	5
+28	__D0SetSensorLowspeed_inline_SetSensorUltrasonic	6	1	112	4	2
+29	__DU0SetSensorLowspeed_inline_initializeSensors	5	1	116	4	5
+30	__rotate_angle0	6	1	120	4	6
+31	__ResetSensorMutex	9	0	124	4	6
+32	__rotateMutex0	9	0	128	4	4
 33	__rotate_theAngle0	5	1	132	4	2
-34	__rotateMutex0	9	0	136	4	4
-35	__main_7qG2_grabState_7qG2_000	4	1	140	2	2
-36	__rotate_OldRotCount0	4	1	142	2	2
-37	__main_7qG2_searchState_7qG2_000	4	1	144	2	3
-38	__rotate_RotCount0	4	1	146	2	4
-39	__main_7qG2_state_7qG2_000	4	1	148	2	5
-40	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_initializeSensors	1	1	150	1	2
-41	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initializeSensors	1	1	151	1	2
-42	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_initializeSensors	1	1	152	1	2
-43	__ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initializeSensors	1	1	153	1	2
-44	__SetSensorLight_7qG2_bActive_7qG2_000_inline_initializeSensors	1	1	154	1	2
-45	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initializeSensors	1	1	155	1	2
-46	__SetSensorLight_7qG2_port_7qG2_000_inline_initializeSensors	1	1	156	1	4
-47	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initializeSensors	1	1	157	1	2
-48	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	158	1	2
-49	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	159	1	2
-50	__SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	160	1	2
-51	__SetSensorUltrasonic_7qG2_port_7qG2_000_inline_initializeSensors	1	1	161	1	2
-52	__SetSensorLowspeed_7qG2_port_7qG2_000_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	162	1	4
-53	__SetSensorLowspeed_7qG2_port_7qG2_000_inline_initializeSensors	1	1	163	1	4
-54	__SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_initializeSensors	1	1	164	1	2
-55	__ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	165	1	2
-56	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	166	1	2
-57	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	167	1	2
-58	__closeClaws_return	1	1	168	1	4
-59	__constValNeg60	2	0	169	1	1
-60	__openClaws_return	1	1	170	1	4
-61	__cupDetect_return	1	1	171	1	4
-62	__turnAround_return	1	1	172	1	3
-63	____initialize_global_data_return	1	1	173	1	3
-64	__constValNeg1	2	0	174	1	1
-65	__main_7qG2_lineDetected_7qG2_002	1	1	175	1	2
-66	__main_7qG2_temp2_7qG2_002	1	1	176	1	3
-67	__main_7qG2_stateMachineRunning_7qG2_000	1	1	177	1	4
-68	__main_7qG2_temp1_7qG2_002	1	1	178	1	3
-69	__lineDetect_return	1	1	179	1	6
-70	__ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initializeSensors	1	1	180	1	2
-71	__SetSensorMode_7qG2_port_7qG2_000_inline_initializeSensors	1	1	181	1	2
-72	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_initializeSensors	1	1	182	1	2
-73	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_initializeSensors	1	1	183	1	2
-74	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initializeSensors	1	1	184	1	2
-75	__SetSensorMode_7qG2_mode_7qG2_000_inline_initializeSensors	1	1	185	1	2
-76	__backUp_return	1	1	186	1	3
-77	__stopMoving_return	1	1	187	1	5
-78	__constVal63	2	0	188	1	6
-79	__moveForward_return	1	1	189	1	5
-80	__constVal96	2	0	190	1	8
-81	__initializeSensors_return	1	1	191	1	3
-82	__constVal2	2	0	192	1	6
-83	__PFTmp	1	1	193	1	1
-84	__RLSBytesCount1	1	1	194	1	7
-85	__RLSBIterations1	1	1	195	1	4
-86	__constVal15	2	0	196	1	3
-87	____RotateMotor0_sign_tmp	2	1	197	1	4
-88	____RotateMotor0_return	1	1	198	1	4
-89	__constVal1	2	0	199	1	15
-90	__constVal32	2	0	200	1	23
-91	__ResetSensorPort	1	1	201	1	5
-92	__constVal3	2	0	202	1	7
-93	__ResetSensorTmp	1	1	203	1	2
-94	____ResetSensorSubroutine_return	1	1	204	1	5
-95	__LSWriteOptions1	1	1	205	1	1
-96	__constVal0	2	1	206	1	30
-97	__RLSBResult1	2	1	207	1	7
-98	__constVal50	2	0	208	1	1
-99	____ReadLSBytes1_return	1	1	209	1	3
-100	__rotate_theTurnPct0	2	1	210	1	4
-101	__rotate_theOM0	1	1	211	1	7
-102	__rotate_theUF0	1	1	212	1	6
-103	__rotate_theRS0	1	1	213	1	3
-104	__rotate_theRM0	1	1	214	1	4
-105	__rotate_sync0	1	1	215	1	3
-106	__rotate_stop0	1	1	216	1	3
-107	__rotate_turnpct0	2	1	217	1	4
-108	__rotate_firstPort0	1	1	218	1	5
-109	__rotate_rs0	1	1	219	1	2
-110	__rotate_theRVD0	1	1	220	1	3
-111	__rotate_thePower0	2	1	221	1	4
-112	__OnRev_Tmp	2	1	222	1	4
-113	__rotate_power0	1	1	223	1	5
-114	__rotate_theRVI0	1	1	224	1	3
-115	__rotate_theRVP0	1	1	225	1	3
-116	__CLSCSArgs1	8	0	3	4	4
-117	__CLSCSArgs1.Result	2	1	228	1	4
-118	__CLSCSArgs1.Port	1	1	229	1	4
-119	__CLSCSArgs1.BytesReady	1	1	230	1	4
-120	__CLSRArgs1	8	0	4	12	5
-121	__CLSRArgs1.Result	2	1	232	1	5
-122	__CLSRArgs1.Port	1	1	233	1	5
-123	__CLSRArgs1.Buffer	7	0	234	4	5
-124	__CLSRArgs1.Buffer.Buffer_type	1	0	0	1	0
-125	__CLSRArgs1.BufferLen	1	1	236	1	5
-126	__CLSWArgs1	8	0	4	12	5
-127	__CLSWArgs1.Result	2	1	240	1	5
-128	__CLSWArgs1.Port	1	1	241	1	5
-129	__CLSWArgs1.Buffer	7	0	242	4	5
-130	__CLSWArgs1.Buffer.Buffer_type	1	0	0	1	0
-131	__CLSWArgs1.ReturnLen	1	1	244	1	5
-132	__TextOutArgs	8	0	4	16	53
-133	__TextOutArgs.Result	2	1	248	1	53
-134	__TextOutArgs.Location	8	0	2	4	53
-135	__TextOutArgs.Location.X	4	1	252	2	53
-136	__TextOutArgs.Location.Y	4	1	254	2	53
-137	__TextOutArgs.Text	7	0	256	4	53
-138	__TextOutArgs.Text.Text_type	1	0	0	1	0
-139	__TextOutArgs.Options	5	1	260	4	53
-140	__RLSReadBuf1	7	0	264	4	8
-141	__RLSReadBuf1.__RLSReadBuf1_type	1	0	0	1	0
-142	__rotate_ports0	7	0	266	4	7
-143	__rotate_ports0.__rotate_ports0_type	1	0	0	1	0
-144	__constStr0014	7	0	268	4	1
+34	__main_7qG2_state_7qG2_000	4	1	136	2	4
+35	__main_7qG2_searchState_7qG2_000	4	1	138	2	2
+36	__main_7qG2_grabState_7qG2_000	4	1	140	2	2
+37	__rotate_RotCount0	4	1	142	2	4
+38	__rotate_OldRotCount0	4	1	144	2	2
+39	__SetSensorLight_7qG2_port_7qG2_000_inline_initializeSensors	1	1	146	1	4
+40	__ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initializeSensors	1	1	147	1	2
+41	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_initializeSensors	1	1	148	1	2
+42	__SetSensorLight_7qG2_bActive_7qG2_000_inline_initializeSensors	1	1	149	1	2
+43	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initializeSensors	1	1	150	1	2
+44	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_initializeSensors	1	1	151	1	2
+45	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initializeSensors	1	1	152	1	2
+46	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initializeSensors	1	1	153	1	2
+47	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	154	1	2
+48	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	155	1	2
+49	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	156	1	2
+50	__SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	157	1	2
+51	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	158	1	2
+52	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initializeSensors	1	1	159	1	2
+53	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_initializeSensors	1	1	160	1	2
+54	__SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_initializeSensors	1	1	161	1	2
+55	__ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	162	1	2
+56	__SetSensorLowspeed_7qG2_port_7qG2_000_inline_initializeSensors	1	1	163	1	4
+57	__constValNeg60	2	0	164	1	1
+58	____initialize_global_data_return	1	1	165	1	3
+59	__closeClaws_return	1	1	166	1	4
+60	__cupDetect_return	1	1	167	1	4
+61	__openClaws_return	1	1	168	1	4
+62	__main_7qG2_stateMachineRunning_7qG2_000	1	1	169	1	4
+63	__constValNeg1	2	0	170	1	1
+64	__main_7qG2_lineDetected_7qG2_002	1	1	171	1	2
+65	__OnRev_Tmp	2	1	172	1	4
+66	__main_7qG2_temp1_7qG2_002	1	1	173	1	3
+67	__main_7qG2_temp2_7qG2_002	1	1	174	1	3
+68	__lineDetect_return	1	1	175	1	5
+69	__SetSensorMode_7qG2_mode_7qG2_000_inline_initializeSensors	1	1	176	1	2
+70	__moveForward_7qG2_speed_7qG2_000	2	1	177	1	5
+71	__SetSensorMode_7qG2_port_7qG2_000_inline_initializeSensors	1	1	178	1	2
+72	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_initializeSensors	1	1	179	1	2
+73	__ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initializeSensors	1	1	180	1	2
+74	__moveForward_return	1	1	181	1	5
+75	__backUp_return	1	1	182	1	3
+76	__stopMoving_return	1	1	183	1	4
+77	__backUp_7qG2_speed_7qG2_000	2	1	184	1	3
+78	__constVal96	2	0	185	1	8
+79	__constVal63	2	0	186	1	6
+80	__SetSensorLowspeed_7qG2_port_7qG2_000_inline_SetSensorUltrasonic_inline_initializeSensors	1	1	187	1	4
+81	__constVal2	2	0	188	1	6
+82	__PFTmp	1	1	189	1	1
+83	__RLSBytesCount1	1	1	190	1	7
+84	__RLSBIterations1	1	1	191	1	4
+85	__constVal15	2	0	192	1	3
+86	____RotateMotor0_return	1	1	193	1	4
+87	__rotate_theTurnPct0	2	1	194	1	4
+88	__constVal32	2	0	195	1	23
+89	____RotateMotor0_sign_tmp	2	1	196	1	4
+90	__LSWriteOptions1	1	1	197	1	1
+91	__constVal0	2	1	198	1	30
+92	__constVal3	2	0	199	1	7
+93	__constVal50	2	0	200	1	1
+94	____ResetSensorSubroutine_return	1	1	201	1	5
+95	__ResetSensorTmp	1	1	202	1	2
+96	__RLSBResult1	2	1	203	1	7
+97	____ReadLSBytes1_return	1	1	204	1	3
+98	__constVal1	2	0	205	1	15
+99	__rotate_turnpct0	2	1	206	1	4
+100	__rotate_stop0	1	1	207	1	3
+101	__rotate_theOM0	1	1	208	1	7
+102	__rotate_theUF0	1	1	209	1	6
+103	__rotate_sync0	1	1	210	1	3
+104	__initializeSensors_return	1	1	211	1	3
+105	__SetSensorUltrasonic_7qG2_port_7qG2_000_inline_initializeSensors	1	1	212	1	2
+106	__rotate_firstPort0	1	1	213	1	5
+107	__rotate_power0	1	1	214	1	5
+108	__rotate_theRVD0	1	1	215	1	3
+109	__rotate_theRVI0	1	1	216	1	3
+110	__rotate_rs0	1	1	217	1	2
+111	__ResetSensorPort	1	1	218	1	5
+112	__rotate_theRM0	1	1	219	1	4
+113	__rotate_thePower0	2	1	220	1	4
+114	__rotate_theRVP0	1	1	221	1	3
+115	__rotate_theRS0	1	1	222	1	3
+116	__CLSWArgs1	8	0	4	12	5
+117	__CLSWArgs1.Result	2	1	224	1	5
+118	__CLSWArgs1.Port	1	1	225	1	5
+119	__CLSWArgs1.Buffer	7	0	226	4	5
+120	__CLSWArgs1.Buffer.Buffer_type	1	0	0	1	0
+121	__CLSWArgs1.ReturnLen	1	1	228	1	5
+122	__TextOutArgs	8	0	4	16	48
+123	__TextOutArgs.Result	2	1	232	1	48
+124	__TextOutArgs.Location	8	0	2	4	48
+125	__TextOutArgs.Location.X	4	1	236	2	48
+126	__TextOutArgs.Location.Y	4	1	238	2	48
+127	__TextOutArgs.Text	7	0	240	4	48
+128	__TextOutArgs.Text.Text_type	1	0	0	1	0
+129	__TextOutArgs.Options	5	1	244	4	48
+130	__CLSRArgs1	8	0	4	12	5
+131	__CLSRArgs1.Result	2	1	248	1	5
+132	__CLSRArgs1.Port	1	1	249	1	5
+133	__CLSRArgs1.Buffer	7	0	250	4	5
+134	__CLSRArgs1.Buffer.Buffer_type	1	0	0	1	0
+135	__CLSRArgs1.BufferLen	1	1	252	1	5
+136	__CLSCSArgs1	8	0	3	4	4
+137	__CLSCSArgs1.Result	2	1	256	1	4
+138	__CLSCSArgs1.Port	1	1	257	1	4
+139	__CLSCSArgs1.BytesReady	1	1	258	1	4
+140	__constStr0015	7	0	260	4	1
+141	__constStr0015.__constStr0015_type	1	1	0	1	0
+142	__constStr0016	7	0	262	4	1
+143	__constStr0016.__constStr0016_type	1	1	0	1	0
+144	__constStr0014	7	0	264	4	1
 145	__constStr0014.__constStr0014_type	1	1	0	1	0
-146	__strbufturnAround	7	0	270	4	2
-147	__strbufturnAround.__strbufturnAround_type	1	0	0	1	0
-148	__strbufmain	7	0	272	4	14
-149	__strbufmain.__strbufmain_type	1	0	0	1	0
-150	__constStr0015	7	0	274	4	1
-151	__constStr0015.__constStr0015_type	1	1	0	1	0
-152	__constStr0016	7	0	276	4	1
-153	__constStr0016.__constStr0016_type	1	1	0	1	0
-154	__constStr0012	7	0	278	4	1
-155	__constStr0012.__constStr0012_type	1	1	0	1	0
-156	__constStr0011	7	0	280	4	1
+146	__constStr0013	7	0	266	4	1
+147	__constStr0013.__constStr0013_type	1	1	0	1	0
+148	__RLSReadBuf1	7	0	268	4	8
+149	__RLSReadBuf1.__RLSReadBuf1_type	1	0	0	1	0
+150	__RLSLastGoodRead1	7	0	270	4	2
+151	__RLSLastGoodRead1.__RLSLastGoodRead1_type	1	0	0	1	0
+152	__rotate_ports0	7	0	272	4	7
+153	__rotate_ports0.__rotate_ports0_type	1	0	0	1	0
+154	__strbufmain	7	0	274	4	14
+155	__strbufmain.__strbufmain_type	1	0	0	1	0
+156	__constStr0011	7	0	276	4	1
 157	__constStr0011.__constStr0011_type	1	1	0	1	0
-158	__constStr0010	7	0	282	4	1
-159	__constStr0010.__constStr0010_type	1	1	0	1	0
-160	__RLSBbufLSWrite1	7	0	284	4	1
+158	__constStr0012	7	0	278	4	1
+159	__constStr0012.__constStr0012_type	1	1	0	1	0
+160	__RLSBbufLSWrite1	7	0	280	4	1
 161	__RLSBbufLSWrite1.__RLSBbufLSWrite1_type	1	0	0	1	0
-162	__constStr0013	7	0	286	4	1
-163	__constStr0013.__constStr0013_type	1	1	0	1	0
-164	__RLSLastGoodRead1	7	0	288	4	2
-165	__RLSLastGoodRead1.__RLSLastGoodRead1_type	1	0	0	1	0
-166	__constStr0009	7	0	290	4	1
-167	__constStr0009.__constStr0009_type	1	1	0	1	0
+162	__constStr0010	7	0	282	4	1
+163	__constStr0010.__constStr0010_type	1	1	0	1	0
 #SOURCES
 Clump	Line	PC	Source
 0	87	0	#line 87 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
@@ -195,332 +191,346 @@ Clump	Line	PC	Source
 0	89	22		syscall 13, __TextOutArgs
 0	88	25	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 0	89	25		mov __D0main, __TextOutArgs.Result
+0	88	27	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	89	27		release __TextOutMutex
 0	88	28	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	89	28		release __TextOutMutex
-0	88	29	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	88	29	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	89	29		set __signed_stack_001main, 0
-0	88	32	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	88	32	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	89	32		set __signed_stack_002main, 50
-0	88	35	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	88	35	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	89	35		strcat __strbufmain, __constStr0011
+0	88	28	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	89	28		set __signed_stack_001main, 0
+0	88	31	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	88	31	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	89	31		set __signed_stack_002main, 50
+0	88	34	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	88	34	#line 88 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	89	34		strcat __strbufmain, __constStr0011
+0	89	38	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	90	38		acquire __TextOutMutex
 0	89	39	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	90	39		acquire __TextOutMutex
-0	89	40	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	90	40		mov __TextOutArgs.Location.X, __signed_stack_001main
-0	89	42	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	90	42		mov __TextOutArgs.Location.Y, __signed_stack_002main
-0	89	44	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	90	44		set __TextOutArgs.Options, 0
-0	89	47	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	90	47		mov __TextOutArgs.Text, __strbufmain
-0	89	49	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	90	49		syscall 13, __TextOutArgs
-0	89	52	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	90	52		mov __D0main, __TextOutArgs.Result
-0	89	55	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	90	55		release __TextOutMutex
-0	89	56	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	89	56	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	90	56		set __signed_stack_001main, 0
-0	89	59	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	89	59	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	90	59		set __signed_stack_002main, 40
-0	89	62	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	89	62	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	90	62		strcat __strbufmain, __constStr0012
-0	91	66	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	92	66		acquire __TextOutMutex
+0	90	39		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	89	41	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	90	41		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	89	43	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	90	43		set __TextOutArgs.Options, 0
+0	89	46	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	90	46		mov __TextOutArgs.Text, __strbufmain
+0	89	48	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	90	48		syscall 13, __TextOutArgs
+0	89	51	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	90	51		mov __D0main, __TextOutArgs.Result
+0	89	53	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	90	53		release __TextOutMutex
+0	89	54	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	89	54	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	90	54		set __signed_stack_001main, 0
+0	89	57	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	89	57	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	90	57		set __signed_stack_002main, 40
+0	89	60	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	89	60	#line 89 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	90	60		strcat __strbufmain, __constStr0012
+0	91	64	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	92	64		acquire __TextOutMutex
+0	91	65	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	92	65		mov __TextOutArgs.Location.X, __signed_stack_001main
 0	91	67	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	92	67		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	92	67		mov __TextOutArgs.Location.Y, __signed_stack_002main
 0	91	69	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	92	69		mov __TextOutArgs.Location.Y, __signed_stack_002main
-0	91	71	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	92	71		set __TextOutArgs.Options, 0
+0	92	69		set __TextOutArgs.Options, 0
+0	91	72	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	92	72		mov __TextOutArgs.Text, __strbufmain
 0	91	74	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	92	74		mov __TextOutArgs.Text, __strbufmain
-0	91	76	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	92	76		syscall 13, __TextOutArgs
+0	92	74		syscall 13, __TextOutArgs
+0	91	77	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	92	77		mov __D0main, __TextOutArgs.Result
 0	91	79	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	92	79		mov __D0main, __TextOutArgs.Result
-0	91	82	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	92	82		release __TextOutMutex
-0	91	83	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	93	83	#line 93 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	94	83		subcall initializeSensors, __initializeSensors_return
-0	93	85	#line 93 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	92	79		release __TextOutMutex
+0	91	80	#line 91 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	93	80	#line 93 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	94	80		subcall initializeSensors, __initializeSensors_return
+0	93	82	#line 93 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	94	82	#line 94 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	95	82		set __main_7qG2_searchState_7qG2_000, 1
 0	94	85	#line 94 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	95	85		set __main_7qG2_searchState_7qG2_000, 1
-0	94	88	#line 94 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	95	85	#line 95 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	96	85		set __main_7qG2_grabState_7qG2_000, 2
 0	95	88	#line 95 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	96	88		set __main_7qG2_grabState_7qG2_000, 2
-0	95	91	#line 95 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	97	91	#line 97 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	97	91	#line 97 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	98	91	#line 98 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	99	91		mov __main_7qG2_state_7qG2_000, __main_7qG2_searchState_7qG2_000
-0	98	93	#line 98 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	97	88	#line 97 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	97	88	#line 97 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	98	88	#line 98 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	99	88		mov __main_7qG2_state_7qG2_000, __main_7qG2_searchState_7qG2_000
+0	98	90	#line 98 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	100	90	#line 100 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	101	90		set __main_7qG2_stateMachineRunning_7qG2_000, 1
 0	100	93	#line 100 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	101	93		set __main_7qG2_stateMachineRunning_7qG2_000, 1
-0	100	96	#line 100 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	100	96	#line 100 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	101	96		mov __DU0main, __main_7qG2_stateMachineRunning_7qG2_000
+0	100	93	#line 100 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	101	93		mov __DU0main, __main_7qG2_stateMachineRunning_7qG2_000
+0	102	95	#line 102 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	103	95		tst 5, __D0main, __DU0main
 0	102	98	#line 102 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	103	98		tst 5, __D0main, __DU0main
+0	103	98		brtst 4, __ASM_Label_572, __D0main
 0	102	101	#line 102 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	103	101		brtst 4, __ASM_Label_572, __D0main
+0	103	101		set __signed_stack_001main, 0
 0	102	104	#line 102 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	103	104		set __signed_stack_001main, 0
+0	102	104	#line 102 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	103	104		set __signed_stack_002main, 10
 0	102	107	#line 102 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 0	102	107	#line 102 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	103	107		set __signed_stack_002main, 10
-0	102	110	#line 102 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	102	110	#line 102 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	103	110		strcat __strbufmain, __constStr0013
+0	103	107		strcat __strbufmain, __constStr0013
+0	104	111	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	105	111		acquire __TextOutMutex
+0	104	112	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	105	112		mov __TextOutArgs.Location.X, __signed_stack_001main
 0	104	114	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	105	114		acquire __TextOutMutex
-0	104	115	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	105	115		mov __TextOutArgs.Location.X, __signed_stack_001main
-0	104	117	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	105	117		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	105	114		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	104	116	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	105	116		set __TextOutArgs.Options, 0
 0	104	119	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	105	119		set __TextOutArgs.Options, 0
-0	104	122	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	105	122		mov __TextOutArgs.Text, __strbufmain
+0	105	119		mov __TextOutArgs.Text, __strbufmain
+0	104	121	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	105	121		syscall 13, __TextOutArgs
 0	104	124	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	105	124		syscall 13, __TextOutArgs
+0	105	124		mov __D0main, __TextOutArgs.Result
+0	104	126	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	105	126		release __TextOutMutex
 0	104	127	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	105	127		mov __D0main, __TextOutArgs.Result
-0	104	130	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	105	130		release __TextOutMutex
-0	104	131	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	104	131	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	105	131		mov __D0main, __main_7qG2_state_7qG2_000
-0	108	133		brcmp 4, __ASM_Label_582, __constVal1, __D0main
-0	109	137		brcmp 4, __ASM_Label_607, __constVal2, __D0main
-0	110	141		brcmp 4, __ASM_Label_620, __constVal3, __D0main
-0	111	145		jmp __ASM_Label_631
-0	106	147	#line 106 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	106	147	#line 106 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	107	147		set __signed_stack_001main, 0
-0	106	150	#line 106 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	106	150	#line 106 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	107	150		set __signed_stack_002main, 0
-0	106	153	#line 106 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	106	153	#line 106 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	107	153		strcat __strbufmain, __constStr0014
-0	107	157	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	108	157		acquire __TextOutMutex
+0	104	127	#line 104 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	105	127		mov __D0main, __main_7qG2_state_7qG2_000
+0	108	129		brcmp 4, __ASM_Label_582, __constVal1, __D0main
+0	109	133		brcmp 4, __ASM_Label_613, __constVal2, __D0main
+0	110	137		brcmp 4, __ASM_Label_634, __constVal3, __D0main
+0	111	141		jmp __ASM_Label_639
+0	106	143	#line 106 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	106	143	#line 106 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	107	143		set __signed_stack_001main, 0
+0	106	146	#line 106 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	106	146	#line 106 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	107	146		set __signed_stack_002main, 0
+0	106	149	#line 106 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	106	149	#line 106 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	107	149		strcat __strbufmain, __constStr0014
+0	107	153	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	108	153		acquire __TextOutMutex
+0	107	154	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	108	154		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	107	156	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	108	156		mov __TextOutArgs.Location.Y, __signed_stack_002main
 0	107	158	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	108	158		mov __TextOutArgs.Location.X, __signed_stack_001main
-0	107	160	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	108	160		mov __TextOutArgs.Location.Y, __signed_stack_002main
-0	107	162	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	108	162		set __TextOutArgs.Options, 0
-0	107	165	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	108	165		mov __TextOutArgs.Text, __strbufmain
-0	107	167	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	108	167		syscall 13, __TextOutArgs
-0	107	170	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	108	170		mov __D0main, __TextOutArgs.Result
-0	107	173	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	108	173		release __TextOutMutex
-0	107	174	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	108	174	#line 108 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	109	174		subcall lineDetect, __lineDetect_return
-0	108	176	#line 108 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	109	176		mov __main_7qG2_temp1_7qG2_002, __DU0lineDetect
-0	108	178	#line 108 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	109	178	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	110	178		subcall cupDetect, __cupDetect_return
-0	109	180	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	110	180		mov __main_7qG2_temp2_7qG2_002, __DU0cupDetect
+0	108	158		set __TextOutArgs.Options, 0
+0	107	161	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	108	161		mov __TextOutArgs.Text, __strbufmain
+0	107	163	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	108	163		syscall 13, __TextOutArgs
+0	107	166	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	108	166		mov __D0main, __TextOutArgs.Result
+0	107	168	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	108	168		release __TextOutMutex
+0	107	169	#line 107 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	108	169	#line 108 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	109	169		subcall lineDetect, __lineDetect_return
+0	108	171	#line 108 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	109	171		mov __main_7qG2_temp1_7qG2_002, __DU0lineDetect
+0	108	173	#line 108 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	109	173	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	110	173		subcall cupDetect, __cupDetect_return
+0	109	175	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	110	175		mov __main_7qG2_temp2_7qG2_002, __DU0cupDetect
+0	109	177	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	109	177	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	110	177		mov __DU0main, __main_7qG2_temp1_7qG2_002
+0	109	179	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	110	179		not __DU0main, __DU0main
 0	109	182	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	109	182	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	110	182		mov __DU0main, __main_7qG2_temp1_7qG2_002
-0	109	184	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	110	184		not __DU0main, __DU0main
-0	109	187	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	110	187		tst 5, __D0main, __DU0main
+0	110	182		tst 5, __D0main, __DU0main
+0	109	185	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	110	185		brtst 4, __ASM_Label_592, __D0main
+0	109	188	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	110	188		mov __DU0main, __main_7qG2_temp2_7qG2_002
 0	109	190	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	110	190		brtst 4, __ASM_Label_592, __D0main
+0	110	190		not __DU0main, __DU0main
 0	109	193	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	110	193		mov __DU0main, __main_7qG2_temp2_7qG2_002
-0	109	195	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	110	195		not __DU0main, __DU0main
-0	109	198	#line 109 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	110	198		tst 5, __D0main, __DU0main
-0	110	201	#line 110 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	111	201		brtst 4, __ASM_Label_593, __D0main
+0	110	193		tst 5, __D0main, __DU0main
+0	110	196	#line 110 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	111	196		brtst 4, __ASM_Label_593, __D0main
+0	110	199	#line 110 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	111	199		set __moveForward_7qG2_speed_7qG2_000, 25
+0	110	202	#line 110 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	111	202	#line 111 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	112	202		subcall moveForward, __moveForward_return
 0	111	204	#line 111 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	112	204		subcall moveForward, __moveForward_return
+0	111	204	#line 111 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	112	204		jmp __ASM_Label_596
 0	111	206	#line 111 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	111	206	#line 111 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	112	206		jmp __ASM_Label_594
-0	111	208	#line 111 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	112	208		mov __DU0main, __main_7qG2_temp1_7qG2_002
-0	114	210	#line 114 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	115	210		tst 5, __D0main, __DU0main
-0	114	213	#line 114 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	115	213		brtst 4, __ASM_Label_597, __D0main
+0	112	206		mov __DU0main, __main_7qG2_temp1_7qG2_002
+0	114	208	#line 114 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	115	208		tst 5, __D0main, __DU0main
+0	114	211	#line 114 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	115	211		brtst 4, __ASM_Label_599, __D0main
+0	115	214	#line 115 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	116	214		subcall stopMoving, __stopMoving_return
 0	115	216	#line 115 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	116	216		subcall stopMoving, __stopMoving_return
+0	115	216	#line 115 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	116	216		jmp __ASM_Label_600
 0	115	218	#line 115 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	115	218	#line 115 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	116	218		jmp __ASM_Label_598
-0	115	220	#line 115 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	116	220		mov __DU0main, __main_7qG2_temp2_7qG2_002
-0	116	222	#line 116 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	117	222		tst 5, __D0main, __DU0main
-0	116	225	#line 116 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	117	225		brtst 4, __ASM_Label_601, __D0main
+0	116	218		mov __DU0main, __main_7qG2_temp2_7qG2_002
+0	116	220	#line 116 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	117	220		tst 5, __D0main, __DU0main
+0	116	223	#line 116 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	117	223		brtst 4, __ASM_Label_603, __D0main
+0	117	226	#line 117 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	118	226		subcall openClaws, __openClaws_return
 0	117	228	#line 117 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	118	228		subcall openClaws, __openClaws_return
-0	117	230	#line 117 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	118	230	#line 118 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	119	230		mov __main_7qG2_state_7qG2_000, __main_7qG2_grabState_7qG2_000
-0	118	232	#line 118 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	118	232	#line 118 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	119	232	#line 119 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	120	232		jmp __ASM_Label_604
-0	120	234	#line 120 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	121	234		mov __main_7qG2_state_7qG2_000, __constValNeg1
-0	120	236	#line 120 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	120	236	#line 120 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	121	236	#line 121 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	121	236	#line 121 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	121	236	#line 121 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	123	236	#line 123 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	124	236		jmp __ASM_Label_581
-0	123	238	#line 123 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	124	238	#line 124 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	124	238	#line 124 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	125	238		set __signed_stack_001main, 0
-0	124	241	#line 124 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	124	241	#line 124 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	125	241		set __signed_stack_002main, 0
-0	124	244	#line 124 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	124	244	#line 124 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	125	244		strcat __strbufmain, __constStr0015
-0	131	248	#line 131 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	132	248		acquire __TextOutMutex
-0	131	249	#line 131 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	132	249		mov __TextOutArgs.Location.X, __signed_stack_001main
-0	131	251	#line 131 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	132	251		mov __TextOutArgs.Location.Y, __signed_stack_002main
-0	131	253	#line 131 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	132	253		set __TextOutArgs.Options, 0
-0	131	256	#line 131 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	132	256		mov __TextOutArgs.Text, __strbufmain
-0	131	258	#line 131 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	132	258		syscall 13, __TextOutArgs
-0	131	261	#line 131 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	132	261		mov __D0main, __TextOutArgs.Result
-0	131	264	#line 131 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	132	264		release __TextOutMutex
-0	131	265	#line 131 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	132	265	#line 132 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	133	265		subcall lineDetect, __lineDetect_return
-0	132	267	#line 132 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	133	267		mov __main_7qG2_lineDetected_7qG2_002, __DU0lineDetect
-0	132	269	#line 132 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	132	269	#line 132 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	133	269		mov __DU0main, __main_7qG2_lineDetected_7qG2_002
-0	133	271	#line 133 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	134	271		tst 5, __D0main, __DU0main
-0	133	274	#line 133 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	134	274		brtst 4, __ASM_Label_616, __D0main
-0	134	277	#line 134 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	135	277		subcall closeClaws, __closeClaws_return
-0	134	279	#line 134 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	117	228	#line 117 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	118	228		set __moveForward_7qG2_speed_7qG2_000, 30
+0	117	231	#line 117 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	118	231	#line 118 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	119	231		subcall moveForward, __moveForward_return
+0	118	233	#line 118 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	118	233	#line 118 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	119	233		set __Wait_7qG2_ms_7qG2_000_inline_main, 1500
+0	118	236	#line 118 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	8551	236	#line 8551 "NXCDefs.h"
+0	8552	236		wait2 NA, __Wait_7qG2_ms_7qG2_000_inline_main
+0	8551	239	#line 8551 "NXCDefs.h"
+0	119	239	#line 119 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	120	239	#line 120 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	121	239		subcall closeClaws, __closeClaws_return
+0	120	241	#line 120 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	121	241	#line 121 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	122	241		mov __main_7qG2_state_7qG2_000, __main_7qG2_grabState_7qG2_000
+0	121	243	#line 121 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	121	243	#line 121 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	122	243	#line 122 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	123	243		jmp __ASM_Label_610
+0	123	245	#line 123 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	124	245		mov __main_7qG2_state_7qG2_000, __constValNeg1
+0	123	247	#line 123 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	123	247	#line 123 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	124	247	#line 124 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	124	247	#line 124 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	124	247	#line 124 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	126	247	#line 126 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	127	247		jmp __ASM_Label_581
+0	126	249	#line 126 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	127	249	#line 127 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	127	249	#line 127 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	128	249		set __signed_stack_001main, 0
+0	127	252	#line 127 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	127	252	#line 127 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	128	252		set __signed_stack_002main, 0
+0	127	255	#line 127 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	127	255	#line 127 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	128	255		strcat __strbufmain, __constStr0015
+0	134	259	#line 134 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	135	259		acquire __TextOutMutex
+0	134	260	#line 134 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	135	260		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	134	262	#line 134 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	135	262		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	134	264	#line 134 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	135	264		set __TextOutArgs.Options, 0
+0	134	267	#line 134 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	135	267		mov __TextOutArgs.Text, __strbufmain
+0	134	269	#line 134 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	135	269		syscall 13, __TextOutArgs
+0	134	272	#line 134 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	135	272		mov __D0main, __TextOutArgs.Result
+0	134	274	#line 134 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	135	274		release __TextOutMutex
+0	134	275	#line 134 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	135	275	#line 135 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	136	275		subcall lineDetect, __lineDetect_return
+0	135	277	#line 135 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	136	277		mov __main_7qG2_lineDetected_7qG2_002, __DU0lineDetect
 0	135	279	#line 135 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	136	279		subcall stopMoving, __stopMoving_return
-0	135	281	#line 135 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	136	281	#line 136 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	137	281		set __main_7qG2_stateMachineRunning_7qG2_000, 0
-0	136	284	#line 136 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	136	284	#line 136 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	135	279	#line 135 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	136	279		mov __DU0main, __main_7qG2_lineDetected_7qG2_002
+0	137	281	#line 137 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	138	281		tst 5, __D0main, __DU0main
 0	137	284	#line 137 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	138	284		jmp __ASM_Label_619
-0	138	286	#line 138 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	139	286		subcall moveForward, __moveForward_return
-0	138	288	#line 138 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	147	288	#line 147 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	149	288	#line 149 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	150	288		jmp __ASM_Label_581
-0	149	290	#line 149 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	150	290	#line 150 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	150	290	#line 150 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	151	290		set __signed_stack_001main, 0
-0	150	293	#line 150 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	150	293	#line 150 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	151	293		set __signed_stack_002main, 0
-0	150	296	#line 150 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	150	296	#line 150 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	151	296		strcat __strbufmain, __constStr0016
-0	151	300	#line 151 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	152	300		acquire __TextOutMutex
-0	151	301	#line 151 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	152	301		mov __TextOutArgs.Location.X, __signed_stack_001main
-0	151	303	#line 151 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	152	303		mov __TextOutArgs.Location.Y, __signed_stack_002main
-0	151	305	#line 151 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	152	305		set __TextOutArgs.Options, 0
-0	151	308	#line 151 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	152	308		mov __TextOutArgs.Text, __strbufmain
-0	151	310	#line 151 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	152	310		syscall 13, __TextOutArgs
-0	151	313	#line 151 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	152	313		mov __D0main, __TextOutArgs.Result
-0	151	316	#line 151 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	152	316		release __TextOutMutex
-0	151	317	#line 151 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	151	317	#line 151 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	152	317		subcall lineDetect, __lineDetect_return
-0	151	319	#line 151 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	151	319	#line 151 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	152	319		not __DU0main, __DU0lineDetect
-0	152	322	#line 152 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	153	322		tst 5, __D0main, __DU0main
-0	152	325	#line 152 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	153	325		brtst 4, __ASM_Label_626, __D0main
-0	153	328	#line 153 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	154	328		subcall moveForward, __moveForward_return
-0	153	330	#line 153 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	154	330	#line 154 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	155	330		jmp __ASM_Label_625
-0	154	332	#line 154 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	155	332	#line 155 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	156	332		subcall openClaws, __openClaws_return
-0	155	334	#line 155 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	156	334	#line 156 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	157	334		subcall backUp, __backUp_return
-0	156	336	#line 156 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	157	336	#line 157 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	158	336		subcall closeClaws, __closeClaws_return
-0	157	338	#line 157 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	158	338	#line 158 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	159	338		subcall turnAround, __turnAround_return
-0	158	340	#line 158 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	159	340	#line 159 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	160	340		mov __main_7qG2_state_7qG2_000, __main_7qG2_searchState_7qG2_000
-0	159	342	#line 159 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	159	342	#line 159 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	161	342	#line 161 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	162	342		jmp __ASM_Label_581
-0	161	344	#line 161 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	162	344	#line 162 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	163	344	#line 163 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	164	344		set __main_7qG2_stateMachineRunning_7qG2_000, 0
-0	163	347	#line 163 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	163	347	#line 163 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	165	347	#line 165 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	181	347	#line 181 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	182	347		jmp __ASM_Label_571
-0	181	349	#line 181 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-0	182	349		exit -1, -1
+0	138	284		brtst 4, __ASM_Label_622, __D0main
+0	138	287	#line 138 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	139	287		subcall stopMoving, __stopMoving_return
+0	138	289	#line 138 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	138	289	#line 138 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	139	289		set __Wait_7qG2_ms_7qG2_000_inline_main, 1000
+0	138	292	#line 138 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	8551	292	#line 8551 "NXCDefs.h"
+0	8552	292		wait2 NA, __Wait_7qG2_ms_7qG2_000_inline_main
+0	8551	295	#line 8551 "NXCDefs.h"
+0	139	295	#line 139 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	140	295	#line 140 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	141	295		subcall openClaws, __openClaws_return
+0	140	297	#line 140 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	140	297	#line 140 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	141	297		set __backUp_7qG2_speed_7qG2_000, 25
+0	140	300	#line 140 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	141	300	#line 141 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	142	300		subcall backUp, __backUp_return
+0	141	302	#line 141 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	141	302	#line 141 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	142	302		set __Wait_7qG2_ms_7qG2_000_inline_main, 1000
+0	141	305	#line 141 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	8551	305	#line 8551 "NXCDefs.h"
+0	8552	305		wait2 NA, __Wait_7qG2_ms_7qG2_000_inline_main
+0	8551	308	#line 8551 "NXCDefs.h"
+0	142	308	#line 142 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	143	308	#line 143 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	144	308		subcall closeClaws, __closeClaws_return
+0	143	310	#line 143 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	146	310	#line 146 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	147	310		set __main_7qG2_stateMachineRunning_7qG2_000, 0
+0	146	313	#line 146 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	146	313	#line 146 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	147	313	#line 147 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	148	313		jmp __ASM_Label_631
+0	147	315	#line 147 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	148	315		set __moveForward_7qG2_speed_7qG2_000, 25
+0	147	318	#line 147 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	148	318	#line 148 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	149	318		subcall moveForward, __moveForward_return
+0	148	320	#line 148 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	157	320	#line 157 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	159	320	#line 159 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	160	320		jmp __ASM_Label_581
+0	159	322	#line 159 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	160	322	#line 160 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	160	322	#line 160 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	161	322		set __signed_stack_001main, 0
+0	160	325	#line 160 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	160	325	#line 160 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	161	325		set __signed_stack_002main, 0
+0	160	328	#line 160 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	160	328	#line 160 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	161	328		strcat __strbufmain, __constStr0016
+0	169	332	#line 169 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	170	332		acquire __TextOutMutex
+0	169	333	#line 169 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	170	333		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	169	335	#line 169 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	170	335		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	169	337	#line 169 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	170	337		set __TextOutArgs.Options, 0
+0	169	340	#line 169 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	170	340		mov __TextOutArgs.Text, __strbufmain
+0	169	342	#line 169 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	170	342		syscall 13, __TextOutArgs
+0	169	345	#line 169 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	170	345		mov __D0main, __TextOutArgs.Result
+0	169	347	#line 169 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	170	347		release __TextOutMutex
+0	169	348	#line 169 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	171	348	#line 171 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	172	348		jmp __ASM_Label_581
+0	171	350	#line 171 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	172	350	#line 172 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	173	350	#line 173 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	174	350		set __main_7qG2_stateMachineRunning_7qG2_000, 0
+0	173	353	#line 173 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	173	353	#line 173 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	175	353	#line 175 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	191	353	#line 191 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	192	353		jmp __ASM_Label_571
+0	191	355	#line 191 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+0	192	355		exit -1, -1
 1	5067	0		brtst 4, __rotate_Done0, __rotate_angle0
 1	5068	3		set ____RotateMotor0_sign_tmp, 0
 1	5068	6		brtst EQ, __sign_0, __rotate_angle0
@@ -658,7 +668,7 @@ Clump	Line	PC	Source
 4	4279	43		mov __ResetSensorPort, __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_initializeSensors
 4	4279	45		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
 4	4279	47		release __ResetSensorMutex
-4	4460	48	#line 4460 "NXCDefs.h"
+4	4502	48	#line 4502 "NXCDefs.h"
 4	4278	48	#line 4278 "NXCDefs.h"
 4	4345	48	#line 4345 "NXCDefs.h"
 4	4352	48	#line 4352 "NXCDefs.h"
@@ -710,7 +720,7 @@ Clump	Line	PC	Source
 4	4279	89		mov __ResetSensorPort, __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initializeSensors
 4	4279	91		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
 4	4279	93		release __ResetSensorMutex
-4	4552	94	#line 4552 "NXCDefs.h"
+4	4594	94	#line 4594 "NXCDefs.h"
 4	4278	94	#line 4278 "NXCDefs.h"
 4	4345	94	#line 4345 "NXCDefs.h"
 4	9	94	#line 9 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
@@ -761,7 +771,7 @@ Clump	Line	PC	Source
 4	4279	135		mov __ResetSensorPort, __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initializeSensors
 4	4279	137		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
 4	4279	139		release __ResetSensorMutex
-4	4643	140	#line 4643 "NXCDefs.h"
+4	4685	140	#line 4685 "NXCDefs.h"
 4	4278	140	#line 4278 "NXCDefs.h"
 4	4316	140	#line 4316 "NXCDefs.h"
 4	10	140	#line 10 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
@@ -778,52 +788,52 @@ Clump	Line	PC	Source
 4	13	150	#line 13 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 4	14	150		subret __initializeSensors_return
 5	15	0	#line 15 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-5	16	0		set __D0moveForward, 25
-5	16	3	#line 16 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-5	17	3	#pragma macro 7
-5	17	3		setout __constVal1, 2, __D0moveForward, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
-5	4675	26	#line 4675 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-5	16	26	#line 16 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-5	16	26	#line 16 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-5	17	26		set __D0moveForward, 25
-5	17	29	#line 17 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-5	18	29	#pragma macro 7
-5	18	29		setout __constVal2, 2, __D0moveForward, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
-5	4680	52	#line 4680 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-5	17	52	#line 17 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-5	19	52	#line 19 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-5	20	52		subret __moveForward_return
+5	16	0		mov __D0moveForward, __moveForward_7qG2_speed_7qG2_000
+5	16	2	#line 16 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+5	17	2	#pragma macro 7
+5	17	2		setout __constVal1, 2, __D0moveForward, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+5	4723	25	#line 4723 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+5	16	25	#line 16 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+5	16	25	#line 16 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+5	17	25		mov __D0moveForward, __moveForward_7qG2_speed_7qG2_000
+5	17	27	#line 17 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+5	18	27	#pragma macro 7
+5	18	27		setout __constVal2, 2, __D0moveForward, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+5	4730	50	#line 4730 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+5	17	50	#line 17 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+5	19	50	#line 19 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+5	20	50		subret __moveForward_return
 6	21	0	#line 21 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-6	22	0		set __D0backUp, 75
-6	22	3	#line 22 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-6	23	3	#pragma macro 10
-6	23	3		neg __OnRev_Tmp, __D0backUp
-6	23	6		setout __constVal1, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
-6	4690	29	#line 4690 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-6	22	29	#line 22 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-6	22	29	#line 22 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-6	23	29		set __D0backUp, 75
-6	23	32	#line 23 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-6	24	32	#pragma macro 10
-6	24	32		neg __OnRev_Tmp, __D0backUp
-6	24	35		setout __constVal2, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
-6	4695	58	#line 4695 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-6	23	58	#line 23 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-6	25	58	#line 25 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-6	26	58		subret __backUp_return
+6	22	0		mov __D0backUp, __backUp_7qG2_speed_7qG2_000
+6	22	2	#line 22 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+6	23	2	#pragma macro 10
+6	23	2		neg __OnRev_Tmp, __D0backUp
+6	23	5		setout __constVal1, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+6	4746	28	#line 4746 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+6	22	28	#line 22 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+6	22	28	#line 22 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+6	23	28		mov __D0backUp, __backUp_7qG2_speed_7qG2_000
+6	23	30	#line 23 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+6	24	30	#pragma macro 10
+6	24	30		neg __OnRev_Tmp, __D0backUp
+6	24	33		setout __constVal2, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+6	4753	56	#line 4753 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+6	23	56	#line 23 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+6	25	56	#line 25 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+6	26	56		subret __backUp_return
 7	27	0	#line 27 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 7	28	0		set __D0stopMoving, 0
 7	28	3	#line 28 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 7	29	3	#pragma macro 7
 7	29	3		setout __constVal1, 2, __D0stopMoving, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
-7	4705	26	#line 4705 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+7	4763	26	#line 4763 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 7	28	26	#line 28 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 7	28	26	#line 28 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 7	29	26		set __D0stopMoving, 0
 7	29	29	#line 29 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 7	30	29	#pragma macro 7
 7	30	29		setout __constVal2, 2, __D0stopMoving, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
-7	4710	52	#line 4710 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+7	4768	52	#line 4768 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 7	29	52	#line 29 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 7	31	52	#line 31 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 7	32	52		subret __stopMoving_return
@@ -849,25 +859,25 @@ Clump	Line	PC	Source
 8	47	21		syscall 13, __TextOutArgs
 8	46	24	#line 46 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 8	47	24		mov __D0lineDetect, __TextOutArgs.Result
+8	46	26	#line 46 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+8	47	26		release __TextOutMutex
 8	46	27	#line 46 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-8	47	27		release __TextOutMutex
-8	46	28	#line 46 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-8	46	28	#line 46 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-8	46	28	#line 46 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-8	47	28		getin __signed_stack_001lineDetect, __constVal2, 4
-8	46	32	#line 46 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-8	48	32	#line 48 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-8	49	32		set __D0lineDetect, 500
-8	48	35	#line 48 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-8	49	35		cmp 0, __D0lineDetect, __signed_stack_001lineDetect, __D0lineDetect
-8	48	39	#line 48 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-8	49	39		mov __DU0lineDetect, __D0lineDetect
-8	48	41	#line 48 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-8	49	41		subret __lineDetect_return
-8	48	43	#line 48 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-8	48	43	#line 48 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-8	50	43	#line 50 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-8	51	43		subret __lineDetect_return
+8	46	27	#line 46 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+8	46	27	#line 46 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+8	47	27		getin __signed_stack_001lineDetect, __constVal2, 4
+8	46	31	#line 46 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+8	48	31	#line 48 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+8	49	31		set __D0lineDetect, 500
+8	48	34	#line 48 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+8	49	34		cmp 0, __D0lineDetect, __signed_stack_001lineDetect, __D0lineDetect
+8	48	38	#line 48 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+8	49	38		mov __DU0lineDetect, __D0lineDetect
+8	48	40	#line 48 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+8	49	40		subret __lineDetect_return
+8	48	42	#line 48 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+8	48	42	#line 48 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+8	50	42	#line 50 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+8	51	42		subret __lineDetect_return
 9	53	0	#line 53 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 9	54	0	#pragma macro 26
 9	54	0		acquire __RLSBmutex1
@@ -877,7 +887,7 @@ Clump	Line	PC	Source
 9	54	9		subcall __ReadLSBytes1, ____ReadLSBytes1_return
 9	54	11		index __D0cupDetect, __RLSReadBuf1, 65535
 9	54	15		release __RLSBmutex1
-9	4853	16	#line 4853 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+9	4911	16	#line 4911 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 9	53	16	#line 53 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 9	54	16		mov __signed_stack_001cupDetect, __D0cupDetect
 9	54	18	#line 54 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
@@ -892,96 +902,66 @@ Clump	Line	PC	Source
 9	54	29	#line 54 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 9	56	29	#line 56 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
 9	57	29		subret __cupDetect_return
-10	67	0	#line 67 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	68	0		set __signed_stack_001turnAround, 20
-10	67	3	#line 67 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	67	3	#line 67 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	68	3		set __signed_stack_002turnAround, 0
-10	67	6	#line 67 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	67	6	#line 67 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	68	6		strcat __strbufturnAround, __constStr0009
-10	68	10	#line 68 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	69	10		acquire __TextOutMutex
-10	68	11	#line 68 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	69	11		mov __TextOutArgs.Location.X, __signed_stack_001turnAround
-10	68	13	#line 68 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	69	13		mov __TextOutArgs.Location.Y, __signed_stack_002turnAround
-10	68	15	#line 68 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	69	15		set __TextOutArgs.Options, 0
-10	68	18	#line 68 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	69	18		mov __TextOutArgs.Text, __strbufturnAround
-10	68	20	#line 68 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	69	20		syscall 13, __TextOutArgs
-10	68	23	#line 68 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	68	23	#line 68 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	69	23		release __TextOutMutex
-10	68	24	#line 68 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	69	24	#line 69 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	70	24		subcall stopMoving, __stopMoving_return
-10	69	26	#line 69 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	71	26	#line 71 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-10	72	26		subret __turnAround_return
-11	72	0	#line 72 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-11	73	0		set __signed_stack_001openClaws, 75
-11	72	3	#line 72 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-11	72	3	#line 72 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-11	73	3		set __D0openClaws, 60
-11	73	6	#line 73 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-11	74	6	#pragma macro 33
-11	74	6		acquire __rotateMutex0
-11	74	7		arrbuild __rotate_ports0, __constVal0
-11	74	11		mov __rotate_power0, __signed_stack_001openClaws
-11	74	13		mov __rotate_angle0, __D0openClaws
-11	74	15		mov __rotate_turnpct0, __constVal0
-11	74	17		mov __rotate_sync0, __constVal0
-11	74	19		mov __rotate_stop0, __constVal1
-11	74	21		mov __rotate_theRVP0, __constVal32
-11	74	23		mov __rotate_theRVI0, __constVal0
-11	74	25		mov __rotate_theRVD0, __constVal96
-11	74	27		subcall __RotateMotor0, ____RotateMotor0_return
-11	74	29		release __rotateMutex0
-11	4932	30	#line 4932 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-11	73	30	#line 73 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-11	75	30	#line 75 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-11	76	30		subret __openClaws_return
-12	76	0	#line 76 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-12	77	0		set __signed_stack_001closeClaws, 75
-12	76	3	#line 76 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-12	76	3	#line 76 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-12	77	3		mov __D0closeClaws, __constValNeg60
-12	77	5	#line 77 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-12	78	5	#pragma macro 33
-12	78	5		acquire __rotateMutex0
-12	78	6		arrbuild __rotate_ports0, __constVal0
-12	78	10		mov __rotate_power0, __signed_stack_001closeClaws
-12	78	12		mov __rotate_angle0, __D0closeClaws
-12	78	14		mov __rotate_turnpct0, __constVal0
-12	78	16		mov __rotate_sync0, __constVal0
-12	78	18		mov __rotate_stop0, __constVal1
-12	78	20		mov __rotate_theRVP0, __constVal32
-12	78	22		mov __rotate_theRVI0, __constVal0
-12	78	24		mov __rotate_theRVD0, __constVal96
-12	78	26		subcall __RotateMotor0, ____RotateMotor0_return
-12	78	28		release __rotateMutex0
-12	4948	29	#line 4948 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-12	77	29	#line 77 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-12	79	29	#line 79 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-12	80	29		subret __closeClaws_return
-13	182	0	#line 182 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
-13	183	0		subret ____initialize_global_data_return
+10	72	0	#line 72 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+10	73	0		set __signed_stack_001openClaws, 75
+10	72	3	#line 72 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+10	72	3	#line 72 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+10	73	3		set __D0openClaws, 60
+10	73	6	#line 73 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+10	74	6	#pragma macro 33
+10	74	6		acquire __rotateMutex0
+10	74	7		arrbuild __rotate_ports0, __constVal0
+10	74	11		mov __rotate_power0, __signed_stack_001openClaws
+10	74	13		mov __rotate_angle0, __D0openClaws
+10	74	15		mov __rotate_turnpct0, __constVal0
+10	74	17		mov __rotate_sync0, __constVal0
+10	74	19		mov __rotate_stop0, __constVal1
+10	74	21		mov __rotate_theRVP0, __constVal32
+10	74	23		mov __rotate_theRVI0, __constVal0
+10	74	25		mov __rotate_theRVD0, __constVal96
+10	74	27		subcall __RotateMotor0, ____RotateMotor0_return
+10	74	29		release __rotateMutex0
+10	4990	30	#line 4990 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+10	73	30	#line 73 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+10	75	30	#line 75 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+10	76	30		subret __openClaws_return
+11	76	0	#line 76 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+11	77	0		set __signed_stack_001closeClaws, 75
+11	76	3	#line 76 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+11	76	3	#line 76 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+11	77	3		mov __D0closeClaws, __constValNeg60
+11	77	5	#line 77 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+11	78	5	#pragma macro 33
+11	78	5		acquire __rotateMutex0
+11	78	6		arrbuild __rotate_ports0, __constVal0
+11	78	10		mov __rotate_power0, __signed_stack_001closeClaws
+11	78	12		mov __rotate_angle0, __D0closeClaws
+11	78	14		mov __rotate_turnpct0, __constVal0
+11	78	16		mov __rotate_sync0, __constVal0
+11	78	18		mov __rotate_stop0, __constVal1
+11	78	20		mov __rotate_theRVP0, __constVal32
+11	78	22		mov __rotate_theRVI0, __constVal0
+11	78	24		mov __rotate_theRVD0, __constVal96
+11	78	26		subcall __RotateMotor0, ____RotateMotor0_return
+11	78	28		release __rotateMutex0
+11	5006	29	#line 5006 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+11	77	29	#line 77 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+11	79	29	#line 79 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+11	80	29		subret __closeClaws_return
+12	192	0	#line 192 "C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc"
+12	193	0		subret ____initialize_global_data_return
 #CLUMPS
 Clump	Name	Offset	File
 0	main	0	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
-1	__RotateMotor0	352	NXTDefs.h
-2	__ResetSensorSubroutine	521	NXTDefs.h
-3	__ReadLSBytes1	534	NXTDefs.h
-4	initializeSensors	620	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
-5	moveForward	772	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
-6	backUp	826	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
-7	stopMoving	886	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
-8	lineDetect	940	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
-9	cupDetect	985	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
-10	turnAround	1016	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
-11	openClaws	1044	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
-12	closeClaws	1076	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
-13	__initialize_global_data	1107	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
+1	__RotateMotor0	358	NXTDefs.h
+2	__ResetSensorSubroutine	527	NXTDefs.h
+3	__ReadLSBytes1	540	NXTDefs.h
+4	initializeSensors	626	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
+5	moveForward	778	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
+6	backUp	830	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
+7	stopMoving	888	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
+8	lineDetect	942	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
+9	cupDetect	986	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
+10	openClaws	1017	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
+11	closeClaws	1049	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
+12	__initialize_global_data	1080	C:\Users\Lara\Documents\Classes2018\NXC_Code\Main.nxc
