@@ -66,6 +66,7 @@ bool moveIntoGrabbingPosition() { // Jill
 void turnAround() { // Tyler
     // turn robot around to a random angle between approx. 150 and 210
     TextOut(20,0,"DONE!");
+    stopMoving();
 }
 
 void openClaws() {
@@ -109,8 +110,11 @@ task main() {
                 if (!temp1 && !temp2) {
                     moveForward();
                 } else if (temp1) {
-                    turnAround();
+                    //turnAround();
+                    //TextOut(20,0,"HIT LINE!");
+                    stopMoving();
                 } else if (temp2) {
+                    openClaws();
                     state = grabState;
                 } else {
                   state = -1;
@@ -119,19 +123,28 @@ task main() {
 
             case grabState:
                 TextOut(0, 0, "Grab");
-                if (!orient()) {
+               /* if (!orient()) {
                     state = searchState;
                     closeClaws();
                     break;
+                }*/
+
+                bool lineDetected = lineDetect();
+                if (lineDetected) {
+                   closeClaws();
+                   stopMoving();
+                   Wait(1000);
+                   state = removeState;
+                } else {
+                  moveForward();
                 }
-                openClaws();
-                if (!moveIntoGrabbingPosition()) {
+                /*if (!moveIntoGrabbingPosition()) {
                     state = searchState;
                     closeClaws();
                     break;
-                }
-                closeClaws();
-                state = removeState;
+                } */
+                //closeClaws();
+                //state = removeState;
                 // possible sense that cup is there (optional)
                 break;
             
