@@ -57,12 +57,13 @@ bool orient() { // Sam
     // return true if properly oriented, false otherwise (probably change back to search mode)
 }
 
-bool moveIntoGrabbingPosition() { // Sam
+bool moveIntoGrabbingPosition() { // Jill
     // move the robot forward until cup can be grabbed
 }
 
 void turnAround() { // Tyler
     // turn robot around to a random angle between approx. 150 and 210
+    TextOut(20,0,"DONE!");
 }
 
 void openClaws() {
@@ -101,15 +102,16 @@ task main() {
         switch (state) {
             case searchState:
                 TextOut(0, 0, "Search");
-                while (!(lineDetect()) && !(cupDetect())) {
+                bool temp1 = lineDetect();
+                bool temp2 = cupDetect();
+                if (!temp1 && !temp2) {
                     moveForward();
-                }
-                Wait(1000);
-                if (lineDetect()) {
+                } else if (temp1) {
                     turnAround();
-                }
-                if (cupDetect()) {
+                } else if (temp2) {
                     state = grabState;
+                } else {
+                  state = -1;
                 }
                 break;
 

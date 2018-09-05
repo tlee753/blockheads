@@ -1,10 +1,12 @@
 
 //MARK :- CONSTANTS
 #define BLACK_LINE_LIGHT_THRESHOLD 500
+#define CUP_IN_RANGE_THRESHOLD  22
 
 //MARK -: FUNCTIONS
 void initializeSensors() {
     SetSensorUltrasonic(S2);
+    SetSensorLowspeed(IN_2);
     SetSensorLight(S3);
     SetSensorMode(IN_3,SENSOR_MODE_RAW);
 }
@@ -49,7 +51,7 @@ bool lineDetect() { // Lara
 bool cupDetect() { // Sam
     // detect whether or not there is a cup in range
     // this is gonna be a tough mother, probably need static variables
-    return false;
+    return SensorUS(IN_2) < CUP_IN_RANGE_THRESHOLD;
 }
 
 bool orient() { // Sam
