@@ -1,0 +1,18 @@
+task main() {
+     TextOut(0, 60, "Block Heads");
+     TextOut(0, 50, "Ultrasonic Test");
+     TextOut(0, 40, "Version 1.0");
+     
+     TextOut(0, 10, "Distance Reading");
+     SetSensorUltrasonic(S2);
+     while (true) {
+           TextOut(20, 0, " ");
+           NumOut(0, 0, SensorUS(S2));
+
+     }
+
+     RotateMotor(OUT_A, 75, 60);
+     RotateMotor(OUT_A, 75, - 60);
+     //RotateMotor(OUT_B, 75, 720);
+     //RotateMotor(OUT_C, 75, 720);
+}

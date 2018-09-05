@@ -1,0 +1,166 @@
+#define BLACK_LINE_LIGHT_THRESHOLD 500
+
+void initializeSensors() {
+    SetSensorUltrasonic(S2);
+    SetSensorLight(S3);
+    SetSensorMode(IN_3, SENSOR_MODE_RAW);
+}
+
+void moveForward() { // Jill
+    // move the robot forward using differential steering
+    OnFwd(OUT_B, 25);
+    OnFwd(OUT_C, 25);
+}
+
+void backUp() { // Jill
+    // back the robot up to get away from the cup
+    OnRev(OUT_B, 75);
+    OnRev(OUT_C, 75);
+}
+
+void stopMoving() {
+    // move the robot forward using differential steering
+    OnFwd(OUT_B, 0);
+    OnFwd(OUT_C, 0);
+}
+
+int getAmbientLightData(){
+    SetSensorType(IN_3,IN_TYPE_LIGHT_INACTIVE);
+    SetSensorMode(IN_3,IN_MODE_PCTFULLSCALE);
+    ResetSensor(IN_3);
+    return SensorValue(S3);
+}
+
+int getLightSensorData(){
+    return SensorValue(S3);
+}
+
+bool lineDetect() { // Lara
+    // detect whether or not there is a line
+    NumOut(0, 30, SensorValue(S3));
+    return SensorValue(S3) < BLACK_LINE_LIGHT_THRESHOLD;
+
+}
+
+bool cupDetect() { // Sam
+    // detect whether or not there is a cup in range
+    // this is gonna be a tough mother, probably need static variables
+    return false;
+}
+
+bool orient() { // Sam
+    // orient toward the cup
+    // return true if properly oriented, false otherwise (probably change back to search mode)
+}
+
+bool moveIntoGrabbingPosition() { // Jill
+    // move the robot forward until cup can be grabbed
+}
+
+void turnAround() { // Tyler
+    // turn robot around to a random angle between approx. 150 and 210 
+    OnFwd(OUT_B, 60);
+    OnRev(OUT_C, 60);
+    Wait(1000);
+}
+
+void openClaws() {
+    RotateMotor(OUT_A, 75, 60); // 60 degrees open direction
+}
+
+void closeClaws() {
+    RotateMotor(OUT_A, 75, -60); // 60 degrees close direction
+}
+
+int getUltrasonicReading() {
+    return SensorUS(S2); // digital readout of sensor value
+}
+
+
+task main() {
+
+     // text header for robot screen
+    TextOut(0, 60, "Block Heads");
+    TextOut(0, 50, "Main");
+    TextOut(0, 40, "Version 1.0");
+    
+    initializeSensors();
+
+    const int searchState = 1;
+    const int grabState = 2;
+    const int removeState = 3;
+
+    int state = searchState;
+    bool stateMachineRunning = true;
+
+    while (stateMachineRunning) { // while loop that keeps the entire state machine running
+
+        TextOut(0, 10, "State is currently ");
+        
+        switch (state) {
+            case searchState:
+                TextOut(0, 0, "Search");
+                bool temp1 = lineDetect();
+                bool temp2 = cupDetect();
+                if (!temp1 && !temp2) {
+                    moveForward();
+                } else if (temp1) {
+                    turnAround();
+                } else if (temp2) {
+                    state = grabState;
+                } else {
+                  state = -1;
+                }
+                break;
+
+            case grabState:
+                TextOut(0, 0, "Grab");
+                if (!orient()) {
+                    state = searchState;
+                    closeClaws();
+                    break;
+                }
+                openClaws();
+                if (!moveIntoGrabbingPosition()) {
+                    state = searchState;
+                    closeClaws();
+                    break;
+                }
+                closeClaws();
+                state = removeState;
+                // possible sense that cup is there (optional)
+                break;
+            
+            case removeState:
+                TextOut(0, 0, "Remove");
+                while (!lineDetect()) {
+                    moveForward();
+                }
+                openClaws();
+                backUp();
+                closeClaws();
+                turnAround();
+                state = searchState;
+                break;
+
+            default: // error state
+                TextOut(0, 0, "Error");
+                stateMachineRunning = false; // gets you out of state machine
+        }
+    }
+}
+
+
+
+/* CHEAT SHEET
+Motors:
+A - Claws
+B - Left
+C - Right
+
+Sensors:
+1 - Microphone
+2 - Ultrasonic Sensor
+3 - Light Sensor
+4 - Push Button
+*/
