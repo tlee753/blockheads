@@ -65,8 +65,9 @@ bool moveIntoGrabbingPosition() { // Jill
 
 void turnAround() { // Tyler
     // turn robot around to a random angle between approx. 150 and 210
-    TextOut(20,0,"DONE!");
-    stopMoving();
+    OnFwd(OUT_B, 60);
+    OnRev(OUT_C, 60);
+    Wait(1000);
 }
 
 void openClaws() {
@@ -100,23 +101,22 @@ task main() {
 
     while (stateMachineRunning) { // while loop that keeps the entire state machine running
 
-        TextOut(0, 10, "State is currently ");
+        TextOut(0, 10, "State is ");
         
         switch (state) {
             case searchState:
+                 Wait(1000);
                 TextOut(0, 0, "Search");
                 bool temp1 = lineDetect();
                 bool temp2 = cupDetect();
                 if (!temp1 && !temp2) {
-                    moveForward(25);
+                    moveForward(50);
                 } else if (temp1) {
-                    //turnAround();
-                    //TextOut(20,0,"HIT LINE!");
-                    stopMoving();
+                    turnAround();
                 } else if (temp2) {
                     openClaws();
-                    moveForward(30);
-                    Wait(2000);
+                    moveForward(25);
+                    Wait(1500);
                     closeClaws();
                     state = grabState;
                 } else {
@@ -141,8 +141,9 @@ task main() {
                    backUp(25);
                    Wait(1000);
                    closeClaws();
-                   stateMachineRunning = false;
-                   //state = removeState;
+                   turnAround();
+                   //stateMachineRunning = false;
+                   state = searchState;
                      //stateMachineRunning = false;
                 } else {
                   moveForward(25);
@@ -170,6 +171,7 @@ task main() {
                 break;
 
             default: // error state
+                TextOut(0, 0, "Error");
                 stateMachineRunning = false; // gets you out of state machine
         }
     }

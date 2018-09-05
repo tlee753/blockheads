@@ -9,6 +9,7 @@ void initializeSensors() {
     SetSensorLowspeed(IN_2);
     SetSensorLight(S3);
     SetSensorMode(IN_3,SENSOR_MODE_RAW);
+    Wait(1000);
 }
 
 void moveForward(char speed) { // Jill
@@ -67,6 +68,7 @@ void turnAround() { // Tyler
     // turn robot around to a random angle between approx. 150 and 210
     OnFwd(OUT_B, 60);
     OnRev(OUT_C, 60);
+    Wait(1000);
 }
 
 void openClaws() {
@@ -108,14 +110,12 @@ task main() {
                 bool temp1 = lineDetect();
                 bool temp2 = cupDetect();
                 if (!temp1 && !temp2) {
-                    moveForward(25);
+                    moveForward(50);
                 } else if (temp1) {
-                    //turnAround();
-                    //TextOut(20,0,"HIT LINE!");
-                    stopMoving();
+                    turnAround();
                 } else if (temp2) {
                     openClaws();
-                    moveForward(30);
+                    moveForward(25);
                     Wait(1500);
                     closeClaws();
                     state = grabState;
@@ -141,8 +141,9 @@ task main() {
                    backUp(25);
                    Wait(1000);
                    closeClaws();
-                   stateMachineRunning = false;
-                   //state = removeState;
+                   turnAround();
+                   //stateMachineRunning = false;
+                   state = searchState;
                      //stateMachineRunning = false;
                 } else {
                   moveForward(25);
