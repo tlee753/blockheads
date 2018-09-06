@@ -1,18 +1,26 @@
+/***** FILE HEADER *****/
+/*
+File: Main.nxc
+Team: GT Blockheads
+Authors: Lara, Sam, Jill, Tyler
+Date: September 2018
+*/
 
-//MARK :- CONSTANTS
+
+/***** CONSTANTS *****/
 #define BLACK_LINE_LIGHT_THRESHOLD 500
-#define CUP_IN_RANGE_THRESHOLD  22
+#define CUP_IN_RANGE_THRESHOLD 22
 #define STANDARD_WAIT_TIME 1000
 #define TURN_TIME_MIN 400
-#define TURN_TIME_MAX  800
-#define MOVE_SPEED_SLOW  25
-#define MOVE_SPEED_FAST   50
+#define TURN_TIME_MAX 800
+#define MOVE_SPEED_SLOW 25
+#define MOVE_SPEED_FAST 50
 #define MOVE_FORWARD_TO_GRAB_CUP_TIME 1500
 
-//MARK -: FUNCTIONS
 
-//Define the hardware ports of the sensors
-//Initialize light and ultrasonic sensors
+/***** FUNCTIONS *****/
+// Define the hardware ports of the sensors
+// Initialize light and ultrasonic sensors
 void initializeSensors() {
     SetSensorUltrasonic(S2);
     SetSensorLowspeed(IN_2);
@@ -21,30 +29,30 @@ void initializeSensors() {
     Wait(STANDARD_WAIT_TIME);
 }
 
-//Move forward a given speed
-//Input: speed value from 0 to 100; 100 = top speed
-void moveForward(char speed) { // Jill
+// Move forward a given speed
+// Input: speed value from 0 to 100; 100 = top speed
+void moveForward(char speed) {
     // move the robot forward using differential steering
     OnFwd(OUT_B, speed);
     OnFwd(OUT_C, speed);
 }
 
-//Back up a given speed
-//Input: speed value from 0 to 100; 100 = top speed
-void backUp(char speed) { // Jill
+// Back up a given speed
+// Input: speed value from 0 to 100; 100 = top speed
+void backUp(char speed) {
     // back the robot up to get away from the cup
     OnRev(OUT_B, speed);
     OnRev(OUT_C, speed);
 }
 
-//Make the robot stop
+// Make the robot stop
 void stopMoving() {
     OnFwd(OUT_B, 0);
     OnFwd(OUT_C, 0);
 }
 
-//Get the ambient light in the room
-//Output: Integer value of ambient light
+// Get the ambient light in the room
+// Output: Integer value of ambient light
 int getAmbientLightData(){
     SetSensorType(IN_3,IN_TYPE_LIGHT_INACTIVE);
     SetSensorMode(IN_3,IN_MODE_PCTFULLSCALE);
@@ -52,67 +60,61 @@ int getAmbientLightData(){
     return SensorValue(S3);
 }
 
-//Get the reading of the light sensor
-//Output: Int value of light sensor that gets lower as the reflected light is darker
+// Get the reading of the light sensor
+// Output: Int value of light sensor that gets lower as the reflected light is darker
 int getLightSensorData(){
-
     return SensorValue(S3);
 }
 
-//Detect whether or not the robot has crossed a line based on a reflected light threshold on the light sensor
-//Outputs: Bool indicating if a line is being crossed
+// Detect whether or not the robot has crossed a line based on a reflected light threshold on the light sensor
+// Outputs: Bool indicating if a line is being crossed
 bool lineDetect() {
-    // detect whether or not there is a line
     NumOut(0,30,SensorValue(S3));
     return SensorValue(S3) < BLACK_LINE_LIGHT_THRESHOLD;
-
 }
 
-//Detect whether or not a cup is in range
-//Output: Bool indicating if a cup is in grabbing range
+// Detect whether or not a cup is in range
+// Output: Bool indicating if a cup is in grabbing range
 bool cupDetect() {
-    // detect whether or not there is a cup in range
-    // this is gonna be a tough mother, probably need static variables
     return SensorUS(IN_2) < CUP_IN_RANGE_THRESHOLD;
 }
 
-bool orient() {
-    // orient toward the cup
-    // return true if properly oriented, false otherwise (probably change back to search mode)
+// Grab the cups by opening the claws, moving forward onto the cup and closing the claws
+void grab() {
+    openClaws();
+    moveForward(MOVE_SPEED_SLOW);
+    Wait(MOVE_FORWARD_TO_GRAB_CUP_TIME);
+    closeClaws();
 }
 
-bool moveIntoGrabbingPosition() {
-    // move the robot forward until cup can be grabbed
-}
-
-//Make the robot turn a random angle
+// Make the robot turn a random angle
 void turnAround() {
-    // turn robot around to a random angle between approx. 150 and 210
     OnFwd(OUT_B, 60);
     OnRev(OUT_C, 60);
     int randomNumber = Random(TURN_TIME_MIN) + TURN_TIME_MAX;
     Wait(randomNumber);
 }
 
-//Open the robot's claws
+// Open the robot's claws
 void openClaws() {
     RotateMotor(OUT_A, 75, 60); // 60 degrees open direction
 }
 
-//Close the robot's claws
+// Close the robot's claws
 void closeClaws() {
     RotateMotor(OUT_A, 75, -60); // 60 degrees close direction
 }
 
-//Return the distance reading of the ultrasonic sensor
+// Return the distance reading of the ultrasonic sensor
 int getUltrasonicReading() {
     return SensorUS(S2); // digital readout of sensor value
 }
 
 
+/***** STATE MACHINE *****/
 task main() {
 
-     // text header for robot screen
+    // text header for robot screen
     TextOut(0, 60, "Block Heads");
     TextOut(0, 50, "Main");
     TextOut(0, 40, "Version 1.0");
@@ -133,17 +135,13 @@ task main() {
         switch (state) {
             case searchState:
                 TextOut(0, 0, "Search");
-                bool temp1 = lineDetect();
-                bool temp2 = cupDetect();
-                if (!temp1 && !temp2) {
+                bool lineDetected = lineDetect();
+                bool cupDetected = cupDetect();
+                if (!lineDetected && !cupDetected) {
                     moveForward(MOVE_SPEED_FAST);
-                } else if (temp1) {
+                } else if (lineDetected) {
                     turnAround();
-                } else if (temp2) {
-                    openClaws();
-                    moveForward(MOVE_SPEED_SLOW);
-                    Wait(MOVE_FORWARD_TO_GRAB_CUP_TIME);
-                    closeClaws();
+                } else if (cupDetected) {
                     state = grabState;
                 } else {
                   state = -1;
@@ -152,48 +150,25 @@ task main() {
 
             case grabState:
                 TextOut(0, 0, "Grab  ");
-               /* if (!orient()) {
-                    state = searchState;
-                    closeClaws();
-                    break;
-                }*/
-
-                bool lineDetected = lineDetect();
-                if (lineDetected) {
-                   //closeClaws();
-                   stopMoving();
-                   Wait(STANDARD_WAIT_TIME);
-                   openClaws();
-                   backUp(MOVE_SPEED_SLOW);
-                   Wait(STANDARD_WAIT_TIME);
-                   closeClaws();
-                   turnAround();
-                   //stateMachineRunning = false;
-                   state = searchState;
-                     //stateMachineRunning = false;
-                } else {
-                  moveForward(MOVE_SPEED_SLOW);
-                }
-                /*if (!moveIntoGrabbingPosition()) {
-                    state = searchState;
-                    closeClaws();
-                    break;
-                } */
-                //closeClaws();
-                //state = removeState;
-                // possible sense that cup is there (optional)
+                grab();
+                state = removeState;
                 break;
             
             case removeState:
                 TextOut(0, 0, "Remove");
-                /*while (!lineDetect()) {
-                    moveForward();
+                bool lineDetected = lineDetect();
+                if (lineDetected) {
+                    stopMoving();
+                    Wait(STANDARD_WAIT_TIME);
+                    openClaws();
+                    backUp(MOVE_SPEED_SLOW);
+                    Wait(STANDARD_WAIT_TIME);
+                    closeClaws();
+                    turnAround();
+                    state = searchState;
+                } else {
+                    moveForward(MOVE_SPEED_SLOW);
                 }
-                openClaws();
-                backUp();
-                closeClaws();
-                turnAround();
-                state = searchState; */
                 break;
 
             default: // error state
@@ -204,8 +179,8 @@ task main() {
 }
 
 
-
-/* CHEAT SHEET
+/***** CONNECTIONS *****/
+/*
 Motors:
 A - Claws
 B - Left
