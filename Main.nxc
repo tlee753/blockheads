@@ -79,6 +79,16 @@ bool cupDetect() {
     return SensorUS(IN_2) < CUP_IN_RANGE_THRESHOLD;
 }
 
+// Open the robot's claws
+void openClaws() {
+    RotateMotor(OUT_A, 75, 60); // 60 degrees open direction
+}
+
+// Close the robot's claws
+void closeClaws() {
+    RotateMotor(OUT_A, 75, -60); // 60 degrees close direction
+}
+
 // Grab the cups by opening the claws, moving forward onto the cup and closing the claws
 void grab() {
     openClaws();
@@ -95,15 +105,6 @@ void turnAround() {
     Wait(randomNumber);
 }
 
-// Open the robot's claws
-void openClaws() {
-    RotateMotor(OUT_A, 75, 60); // 60 degrees open direction
-}
-
-// Close the robot's claws
-void closeClaws() {
-    RotateMotor(OUT_A, 75, -60); // 60 degrees close direction
-}
 
 // Return the distance reading of the ultrasonic sensor
 int getUltrasonicReading() {
@@ -156,8 +157,8 @@ task main() {
             
             case removeState:
                 TextOut(0, 0, "Remove");
-                bool lineDetected = lineDetect();
-                if (lineDetected) {
+                bool lineIsDetected = lineDetect();
+                if (lineIsDetected) {
                     stopMoving();
                     Wait(STANDARD_WAIT_TIME);
                     openClaws();
