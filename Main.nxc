@@ -107,6 +107,7 @@ void turnAround() {
 
 
 // Return the distance reading of the ultrasonic sensor
+// Output: the ultrasonic distance reading
 int getUltrasonicReading() {
     return SensorUS(S2); // digital readout of sensor value
 }
