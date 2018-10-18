@@ -1,6 +1,7 @@
 
 
 from enum import Enum
+from gpiozero import LED
 
 class State(Enum):
 	LOCKED = 0
@@ -13,6 +14,13 @@ global correct_combination
 
 
 def main():
+	#Initialize into locked state
+	initialize()
+
+	while true:
+		#Wait for interrupt to lock
+
+		#Wait for unlock interrupt
 	
 
 
@@ -30,16 +38,37 @@ def combination_entered_callback(channel):
 
 def safe_closed_callback(channel):
 	#check if limit switch detects closure
+	state = State.LOCKED
 
 def phone_in_range_callback(channel):
-	#returns true if the user's phone is in bluetooth range so s/he can open the safe
+	#check if user's phone is in bluetooth range so s/he can open the safe
+	state = State.UNLOCKED
 
 #actuators
 def change_led_color(color):
 	#change the color of the LED
+	greenLED = LED(17)
+	redLED = LED(18)
+	if color == "red"
+		greenLED.off()
+		redLED.on()
+	else if color == "green"
+		redLED.off()
+		greenLED.on()
+
 
 def open_safe():
 	#turn the motor/solenoid to unlock the safe
 
 def close_safe():
 	#turn the motor/solenoid to lock the safe
+
+#state transitions
+def lock():
+	change_led_color("red")
+	close_safe()
+
+def unlock():
+	change_led_color("green")
+	open_safe()
+
