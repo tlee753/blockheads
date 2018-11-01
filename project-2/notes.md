@@ -1,0 +1,2 @@
+wiringpi (pip)
+bluez (apt)
