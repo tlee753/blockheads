@@ -13,18 +13,17 @@ class State(Enum):
 global state
 global correct_combination
 
-
+redLED = LED(17)
+redLED.off()
 
 def main():
 	#Initialize into locked state
 	initialize()
 
 	while true:
-		#Wait for interrupt to lock
+#Wait for interrupt to lock
 
-		#Wait for unlock interrupt
-	
-
+#Wait for unlock interrupt
 
 
 #Initialize the safe in locked positoin
