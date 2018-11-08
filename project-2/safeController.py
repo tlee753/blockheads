@@ -2,6 +2,8 @@
 
 from enum import Enum
 from gpiozero import LED
+import time 
+import wiringpi
 
 class State(Enum):
 	LOCKED = 0
