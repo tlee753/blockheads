@@ -4,6 +4,7 @@ from enum import Enum
 from gpiozero import LED
 import time 
 import wiringpi
+import bluetooth
 
 class State(Enum):
 	LOCKED = 0
@@ -28,8 +29,26 @@ def main():
 
 #Initialize the safe in locked positoin
 def initialize():
+
+	#initialize state
 	state = State.LOCKED
+	
+	#-----Set up keypad-----#
 	correct_combination = 1234
+	
+	#-----Set up servo-----#
+	# use 'GPIO naming'
+	wiringpi.wiringPiSetupGpio()
+ 
+	# set #18 to be a PWM output
+	wiringpi.pinMode(18, wiringpi.GPIO.PWM_OUTPUT)
+ 
+	# set the PWM mode to milliseconds stype
+	wiringpi.pwmSetMode(wiringpi.GPIO.PWM_MODE_MS)
+ 
+	# divide down clock
+	wiringpi.pwmSetClock(192)
+	wiringpi.pwmSetRange(2000)
 
 #sensors
 def combination_entered_callback(channel):
@@ -60,9 +79,13 @@ def change_led_color(color):
 
 def open_safe():
 	#turn the motor/solenoid to unlock the safe
+	for pulse in range(50, 250, 1):
+                wiringpi.pwmWrite(18, pulse)
 
 def close_safe():
 	#turn the motor/solenoid to lock the safe
+	for pulse in range(250, 50, -1):
+                wiringpi.pwmWrite(18, pulse)
 
 #state transitions
 def lock():
