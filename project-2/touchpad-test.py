@@ -32,7 +32,7 @@ while True:
            if i == int(correct_combination[correct_numbers_entered]):
               print('Correct number entered!')
               correct_numbers_entered = correct_numbers_entered + 1;
-              if correct_numbers_entered == 3:
+              if correct_numbers_entered == 4:
                 print('Unlocked!!')
                 correct_numbers_entered = 0;
         # Next check if transitioned from touched to not touched.
