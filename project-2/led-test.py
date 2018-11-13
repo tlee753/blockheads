@@ -6,18 +6,6 @@ redPin   = 11
 greenPin = 13
 bluePin  = 15
 
-while True:
-  redOn()
-  time.sleep(1)
-  redOff()
-  greenOn()
-  time.sleep(1)
-  greenOff()
-  blueOn()
-  time.sleep(1)
-  blueOff()
-  
-
 def blink(pin):
   GPIO.setmode(GPIO.BOARD)
   GPIO.setup(pin, GPIO.OUT)
@@ -45,3 +33,16 @@ def greenOff():
 
 def blueOff():
 	turnOff(bluePin)
+
+
+while True:
+  redOn()
+  time.sleep(1)
+  redOff()
+  greenOn()
+  time.sleep(1)
+  greenOff()
+  blueOn()
+  time.sleep(1)
+  blueOff()
+  
