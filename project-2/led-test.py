@@ -35,14 +35,13 @@ def blueOff():
 	turnOff(bluePin)
 
 
-while True:
-  redOn()
-  time.sleep(1)
-  redOff()
-  greenOn()
-  time.sleep(1)
-  greenOff()
-  blueOn()
-  time.sleep(1)
-  blueOff()
+redOn()
+time.sleep(1)
+redOff()
+greenOn()
+time.sleep(1)
+greenOff()
+blueOn()
+time.sleep(1)
+blueOff()
   
