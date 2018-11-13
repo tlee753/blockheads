@@ -15,25 +15,32 @@ class State(Enum):
 #Global variables
 global state
 global correct_combination
-global cap = MPR121.MPR121()
+global cap
 global correct_numbers_entered
 global delay_period
 
 #Pinout
-global Limit_switch_pin = 26
-global redPin   = 11
-global greenPin = 13
-global bluePin  = 15
+global Limit_switch_pin
+global redPin
+global greenPin
+global bluePin
 
 
 
 #Initialize the safe in locked positoin
 def initialize():
+	
+	#Pinout
+	global Limit_switch_pin = 26
+	global redPin   = 11
+	global greenPin = 13
+	global bluePin  = 15
 
 	#initialize state
 	state = State.LOCKED
 	
 	#-----Set up keypad-----#
+	cap = MPR121.MPR121()
 	correct_combination = '1234'
 	correct_numbers_entered = 0;
 	
