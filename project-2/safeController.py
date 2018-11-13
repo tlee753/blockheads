@@ -99,32 +99,32 @@ def wait_for_correct_combo():
     		current_touched = cap.touched()
    	 	# Check each pin's last and current state to see if it was pressed or released.
     		for i in range(12):
-       		# Each pin is represented by a bit in the touched value.  A value of 1
-       	 	# means the pin is being touched, and 0 means it is not being touched.
-        	pin_bit = 1 << i
-        	# First check if transitioned from not touched to touched.
-        	if current_touched & pin_bit and not last_touched & pin_bit:
-            		#print('{0} touched!'.format(i))
-           		if i == int(correct_combination[correct_numbers_entered]):
-              			greenOn()
+			# Each pin is represented by a bit in the touched value.  A value of 1
+			# means the pin is being touched, and 0 means it is not being touched.
+			pin_bit = 1 << i
+			# First check if transitioned from not touched to touched.
+			if current_touched & pin_bit and not last_touched & pin_bit:
+				#print('{0} touched!'.format(i))
+				if i == int(correct_combination[correct_numbers_entered]):
+					greenOn()
+					time.sleep(0.1)
+					greenOff()
+					correct_numbers_entered = correct_numbers_entered + 1;
+					if correct_numbers_entered == 4:
+						correct_combo_not_entered = False;
+						correct_numbers_entered = 0;
+						#unlock safe
+			else:
+				redOn()
 				time.sleep(0.1)
-				greenOff()
-              			correct_numbers_entered = correct_numbers_entered + 1;
-              			if correct_numbers_entered == 4:
-                			correct_combo_not_entered = False;
-                			correct_numbers_entered = 0;
-					#unlock safe
-           	else:
-              		redOn()
+				redOff()
+				correct_numbers_entered = 0;
+				# Next check if transitioned from touched to not touched.
+				#if not current_touched & pin_bit and last_touched & pin_bit:
+				#print('{0} released!'.format(i))
+				# Update last state and wait a short period before repeating.
+			last_touched = current_touched
 			time.sleep(0.1)
-			redOff()
-              		correct_numbers_entered = 0;
-        		# Next check if transitioned from touched to not touched.
-        		#if not current_touched & pin_bit and last_touched & pin_bit:
-            		#print('{0} released!'.format(i))
-    			# Update last state and wait a short period before repeating.
-    		last_touched = current_touched
-    		time.sleep(0.1)
 
 def wait_for_safe_close():
 	#check if limit switch detects closure
