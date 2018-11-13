@@ -31,10 +31,10 @@ global bluePin
 def initialize():
 	
 	#Pinout
-	global Limit_switch_pin = 26
-	global redPin   = 11
-	global greenPin = 13
-	global bluePin  = 15
+	Limit_switch_pin = 26
+	redPin   = 11
+	greenPin = 13
+	bluePin  = 15
 
 	#initialize state
 	state = State.LOCKED
