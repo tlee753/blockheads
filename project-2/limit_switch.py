@@ -7,7 +7,7 @@ Pin_number = 26
 
 GPIO.setup(Pin_number, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-while True:
+while False:
     input_state = GPIO.input(Pin_number)
     if input_state == False:
         print('Button Pressed')
