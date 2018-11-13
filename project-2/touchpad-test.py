@@ -35,6 +35,9 @@ while True:
               if correct_numbers_entered == 4:
                 print('Unlocked!!')
                 correct_numbers_entered = 0;
+           else:
+              print('Wrong number entered')
+              correct_numbers_entered = 0;
         # Next check if transitioned from touched to not touched.
         #if not current_touched & pin_bit and last_touched & pin_bit:
             #print('{0} released!'.format(i))
